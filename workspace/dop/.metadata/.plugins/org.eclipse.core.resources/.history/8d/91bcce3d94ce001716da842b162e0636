@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="hibernate-on-top-of-teiid">
+        <property name="context-root" value="hibernate-on-top-of-teiid"/>
+    </wb-module>
+</project-modules>

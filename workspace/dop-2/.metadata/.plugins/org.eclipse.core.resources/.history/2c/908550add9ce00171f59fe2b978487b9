@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:jdbc="http://www.metamatrix.com/metamodels/JDBC" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:7f28d443-e441-4009-8122-03dc139ed01c" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:f5258552-366b-40aa-8aa0-88cc2f2c6e44" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:a70c3754-2a6e-400b-9d8b-22d5790d7243" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:0278a03c-8fb8-49e5-ba94-02281a2da5f3">
+    <annotations xmi:uuid="mmuuid:77a0a8eb-886f-4bac-b480-d0ccd66a19bf" description="Timestamp of the backup" annotatedObject="mmuuid/fe3e87e8-5d87-4cd3-91f0-c57c2c82613b"/>
+    <annotations xmi:uuid="mmuuid:743ef588-9062-430e-b86b-6687ffb650ae" description="Timestamp of the backup" annotatedObject="mmuuid/db1096ab-512b-41b5-93a8-687483d156d6"/>
+    <annotations xmi:uuid="mmuuid:5d93dfb0-27ec-43f4-a31e-aacb68dc064e" description="Timestamp of the backup" annotatedObject="mmuuid/35ed4782-dbf6-45dc-93de-0b9fe852e012"/>
+    <annotations xmi:uuid="mmuuid:b7d76316-a129-42f3-9707-e3abe75fae1c" description="Timestamp of the backup" annotatedObject="mmuuid/21b31758-ed85-42ea-949e-3e05267c38e8"/>
+    <annotations xmi:uuid="mmuuid:71d89ae8-3401-4c05-b481-5fd72e8ff271" description="Timestamp of the backup" annotatedObject="mmuuid/211f698e-77e9-427f-b8fa-1ec96217d082"/>
+    <annotations xmi:uuid="mmuuid:3ac9d3f9-5fe7-466c-88b5-362ef9158e7c" description="Timestamp of the backup" annotatedObject="mmuuid/c10600d3-9bcd-40f1-81f5-92aa07e1dce6"/>
+    <annotations xmi:uuid="mmuuid:f15365b3-5c02-463f-9ba7-88318d079c24" description="Timestamp of the backup" annotatedObject="mmuuid/2ad37786-b81d-4685-b5dd-4d29473fe844"/>
+    <annotations xmi:uuid="mmuuid:575343c1-9b77-4ec3-a9b9-c352c1921776" description="Timestamp of the backup" annotatedObject="mmuuid/fde8093f-07ac-4094-923a-14a5c5e61a07"/>
+    <annotations xmi:uuid="mmuuid:0069d5d9-c0dd-4773-bc73-999521df3870" description="Timestamp of the backup" annotatedObject="mmuuid/8f6181ea-0817-4bc2-94d8-f2de41e665e4"/>
+    <annotations xmi:uuid="mmuuid:a9db9229-8fbe-441b-8262-fc8324b27633" description="Timestamp of the backup" annotatedObject="mmuuid/9da18648-6958-4a9e-8cc2-40394f2df91c"/>
+    <annotations xmi:uuid="mmuuid:e62b622c-c625-4daf-86bc-9a31ae39d9e3" description="Timestamp of the backup" annotatedObject="mmuuid/cea0d4f5-0aa0-4f95-ba62-3e9978d4088d"/>
+    <annotations xmi:uuid="mmuuid:386d89f5-5690-4ba5-be70-d1443762abc4" description="Timestamp of the backup" annotatedObject="mmuuid/6d923be6-4549-4e42-a493-a64488ae3f7f"/>
+    <annotations xmi:uuid="mmuuid:77854261-e4ed-425d-a4c2-d42f141d8f94" annotatedObject="mmuuid/7f28d443-e441-4009-8122-03dc139ed01c">
+      <tags xmi:uuid="mmuuid:482a3fdd-fb15-4605-9b6c-0e1976f1cda2" key="connection:driver-class" value="com.mysql.jdbc.Driver"/>
+      <tags xmi:uuid="mmuuid:303fda29-2ea7-4df8-87cf-3963583d439a" key="connectionProfile:connectionProfileName" value="GEMMA_DS"/>
+      <tags xmi:uuid="mmuuid:d90ea005-a781-43d5-b3ae-fe4aeaa6eca3" key="connection:jarList" value="C:\Users\Jaap\Desktop\Luigi\software\mysql-connector-java-5.1.44-bin.jar"/>
+      <tags xmi:uuid="mmuuid:dbfc1892-dc1c-4a6d-b1b1-c79bd7ad13e2" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.enablement.mysql.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:3ce378c9-f8e4-48bf-9d52-e8616d6ca067" key="translator:name" value="mysql5"/>
+      <tags xmi:uuid="mmuuid:3865a603-40a4-432d-a49e-03a6202814e0" key="connection:connection-url" value="jdbc:mysql://37.230.101.37:3306/gemma_export_prod"/>
+      <tags xmi:uuid="mmuuid:c72b13bb-1aed-4e9f-9650-7264da9162e8" key="connectionProfile:connectionProfileInstanceID" value="abe372f1-ced7-11e7-91f9-fbbf85fb7626"/>
+      <tags xmi:uuid="mmuuid:d4d2c41f-e4e0-43ef-9f7c-7d7b39a24910" key="connection:connectionProfileInstanceID" value="org.eclipse.datatools.enablement.mysql.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:b9f1954d-1808-4377-bc1f-59fb27d56975" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:77446faf-22fe-45f3-ab49-ac1c8452b3b8" key="connection:user-name" value="gemma_export_redhat"/>
+      <tags xmi:uuid="mmuuid:00d8777e-c108-485f-b022-fedaa3398049" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.db.category"/>
+      <tags xmi:uuid="mmuuid:73d88883-ca29-4725-896d-3cd5ce031080" key="connection:JBossDsJndi" value="GEMMA_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:f6766b2f-e495-4f3c-b7da-d98a4ce08ca1" name="csv_all_gemeenten" nameInSource="`gemma_export_prod`.`csv_all_gemeenten`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:e602bd3a-33ee-4e5e-9217-ac6c5b170c10" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/16b4fae4-6d27-4be3-9c53-295ece2fd071">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:103d5e15-81c0-423b-bae8-d9e0850acb52" name="swc_id" nameInSource="`swc_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1954c380-5f47-4431-9128-31474b469168" name="municipality_name" nameInSource="`municipality_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dc77670f-4e0c-440f-8c50-4467aa56115b" name="municipality_cbs" nameInSource="`municipality_cbs`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c20a3159-0207-4d60-bc59-9d83a6ccbc15" name="municipality_contact" nameInSource="`municipality_contact`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b146dad2-2a40-4a61-ab12-9dce190945f1" name="municipality_contact_email" nameInSource="`municipality_contact_email`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:475126f1-ca0c-4f39-8018-8974ced11a2e" name="municipality_progress" nameInSource="`municipality_progress`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:efebb56e-5c92-43b5-9091-33f7fdb78da9" name="last_activity" nameInSource="`last_activity`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fe3e87e8-5d87-4cd3-91f0-c57c2c82613b" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:16b4fae4-6d27-4be3-9c53-295ece2fd071" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/e602bd3a-33ee-4e5e-9217-ac6c5b170c10"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:67194eb3-421a-474b-a360-d12ce5226d36" name="csv_externe_pakketten" nameInSource="`gemma_export_prod`.`csv_externe_pakketten`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:d69a8969-0675-427e-b21a-05e2a85c3e52" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/03486fd4-aeb7-4feb-abea-1b3bdb86d47c">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ea34d688-0f3a-4920-86fc-1415ff6ce10e" name="gemeente_id" nameInSource="`gemeente_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:27e0d4c3-cf95-473a-b54e-7eb59ffb7e48" name="gemeente_naam" nameInSource="`gemeente_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:08e09185-1e4d-4fa4-9bb8-fadd73544070" name="gemeente_cbs" nameInSource="`gemeente_cbs`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f0266e4f-70cc-4ac8-ba65-495bd166d84c" name="samenwerking_id" nameInSource="`samenwerking_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2343ba8b-023e-4b95-82e4-5554c2759d0a" name="samenwerking" nameInSource="`samenwerking`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:912b9d66-2fe3-4ab9-a55f-f6c545ed7d54" name="samenwerking_gemeente_id" nameInSource="`samenwerking_gemeente_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2350ee2d-d749-4236-be07-dd4b37494eb3" name="gebruik_status" nameInSource="`gebruik_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:95c80ba1-964b-4f3b-b889-0d731f89bc02" name="gebruik_datum_ingang_status" nameInSource="`gebruik_datum_ingang_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2ca33308-4f32-4692-9ac0-c81f0d80758b" name="leverancier_naam" nameInSource="`leverancier_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:410eada8-05dc-4435-961b-09c54a23f3ec" name="pakket_id" nameInSource="`pakket_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:13e730e0-79b5-49e7-8184-4edfa4ada9ad" name="pakket_naam" nameInSource="`pakket_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:93c99923-20f6-4aca-ae48-1bf2cdc8cb43" name="pakket_versie" nameInSource="`pakket_versie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b81a9c46-8831-4d5c-bde9-832a6404c4f9" name="referentiecomponenten_id" nameInSource="`referentiecomponenten_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4cd72446-a6d7-4984-af7c-05ea34116900" name="referentiecomponenten_naam" nameInSource="`referentiecomponenten_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:db1096ab-512b-41b5-93a8-687483d156d6" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:03486fd4-aeb7-4feb-abea-1b3bdb86d47c" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/d69a8969-0675-427e-b21a-05e2a85c3e52"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:46e846e9-fede-4ebe-b551-87f2e839864b" name="csv_gemeenten_applicatieportfolio" nameInSource="`gemma_export_prod`.`csv_gemeenten_applicatieportfolio`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:06619a2d-7b42-45a3-9978-7307f13c052e" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/2a4d8fcb-27cd-41fc-8fd9-6bece42b34fb">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:41f3a1ad-3571-49c4-bc2f-f7774bbb45e7" name="gemeente_id" nameInSource="`gemeente_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9c69728a-2aa6-4502-89a8-11ca48179b29" name="gemeente_naam" nameInSource="`gemeente_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e0bb6b80-63f6-4122-9811-c15393ee6fb2" name="gemeente_cbs" nameInSource="`gemeente_cbs`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f3a35992-41b2-41b8-a39b-d14479b8822e" name="samenwerking_id" nameInSource="`samenwerking_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:eddcad56-cec4-42e0-81b4-51260a173973" name="samenwerking" nameInSource="`samenwerking`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:de7e035b-e584-42c5-8df6-2d30a6d47c04" name="samenwerking_gemeente_id" nameInSource="`samenwerking_gemeente_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d02647fb-25ed-4c59-a58c-06b00bf41e5f" name="gebruik_status" nameInSource="`gebruik_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4d516850-2323-4509-95f9-7256b3bc4800" name="gebruik_datum_ingang_status" nameInSource="`gebruik_datum_ingang_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2747facb-aadb-49d6-a9ae-ffa2c76cffae" name="leverancier_id" nameInSource="`leverancier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b485ddb0-a871-460a-87de-8959f7bc96cb" name="leverancier_naam" nameInSource="`leverancier_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:217eb3dc-0c75-4f73-8b7f-9a9c468b15e5" name="pakket_id" nameInSource="`pakket_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3bd4a927-ec8c-4b95-93ce-7354231dec29" name="pakket_naam" nameInSource="`pakket_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4b79a360-523f-4b53-b39f-3ffbbb182c3a" name="pakketversie_id" nameInSource="`pakketversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:96b8dc0f-d436-4c91-a291-ef8620a5ccc6" name="pakketversie_naam" nameInSource="`pakketversie_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a1259295-3c62-4e98-8d82-98ec51877080" name="mutatiedatum_applicatieportfolio" nameInSource="`mutatiedatum_applicatieportfolio`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:52428a0d-1a42-4b72-ba24-8462e3fdfd18" name="referentiecomponenten_id" nameInSource="`referentiecomponenten_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f808b3e4-b0ec-4a8f-9a38-efdd8b943b13" name="referentiecomponenten_naam" nameInSource="`referentiecomponenten_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:35ed4782-dbf6-45dc-93de-0b9fe852e012" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:61862bd1-9d82-4544-8ae4-0553d7111ecc" name="pakketversie_gebruik_technologie" nameInSource="`pakketversie_gebruik_technologie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:2a4d8fcb-27cd-41fc-8fd9-6bece42b34fb" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/06619a2d-7b42-45a3-9978-7307f13c052e"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:4197fbb8-9612-4522-860b-00c33ee22f09" name="csv_gemeenten_participatie" nameInSource="`gemma_export_prod`.`csv_gemeenten_participatie`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:56e4371a-f184-4a3b-a9af-980b6c6d6505" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/3847aa0e-3263-4ccd-ab57-c7b02d1a32f2">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7898217c-cd9c-41fa-a22e-ccb9badb2193" name="swc_id" nameInSource="`swc_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ff4f42de-6e3a-4904-a495-9d4fa754dbb4" name="municipality_name" nameInSource="`municipality_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d7c0bf04-3a60-4638-a00c-fb026fe76b34" name="municipality_cbs" nameInSource="`municipality_cbs`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:de4deacc-5784-4a8b-9767-84fa4819ac39" name="municipality_contact" nameInSource="`municipality_contact`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:db7fb0aa-41c5-4036-9108-3c4fa64e59ed" name="municipality_contact_email" nameInSource="`municipality_contact_email`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1f91e2a8-5fd5-423d-9ea6-9b63a0cb7fc4" name="municipality_progress" nameInSource="`municipality_progress`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1937df2d-7dbe-4e66-a4ca-0319025eaa9c" name="last_activity" nameInSource="`last_activity`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:21b31758-ed85-42ea-949e-3e05267c38e8" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:3847aa0e-3263-4ccd-ab57-c7b02d1a32f2" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/56e4371a-f184-4a3b-a9af-980b6c6d6505"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:936c4044-9c5b-44aa-9c01-f308d4fefcff" name="csv_koppelingen" nameInSource="`gemma_export_prod`.`csv_koppelingen`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:46fb0639-b3d2-4d67-9d24-260558b1cd75" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/a6881959-2456-4b05-8869-a99a353b0132">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1036bee4-90f4-42da-8089-f844e072fed6" name="connection_id" nameInSource="`connection_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:475fd110-ae57-4438-9762-71ddd94d3b18" name="organisation" nameInSource="`organisation`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1dd45995-fc10-497f-a260-ddf9c7a80a64" name="organisation_id" nameInSource="`organisation_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ddba0965-a93b-4e15-8075-78db56c6c578" name="samenwerking" nameInSource="`samenwerking`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:428b9451-3d35-4d99-8f4d-b2466d2e7f27" name="samenwerking_id" nameInSource="`samenwerking_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6b520efb-dc94-4a56-95ef-94da72f5e121" name="connection_state" nameInSource="`connection_state`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9e64ce7d-92cc-4e3d-9744-ee5c070d0b1e" name="state_date" nameInSource="`state_date`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1aa55a8f-59f8-4d1a-bd9f-b3a1f48078f7" name="product_id_1" nameInSource="`product_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:95cc680b-616d-40f6-8e96-4cb586413fe7" name="product_name_1" nameInSource="`product_name_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7f1c6458-4abc-40bb-bbc7-fed8b1a3c1ae" name="product_version_id_1" nameInSource="`product_version_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:52dbf380-2e3f-41b5-9c43-6f2f2967c617" name="product_version_name_1" nameInSource="`product_version_name_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:362f935d-5fca-4b33-b7ce-ca2691068533" name="supplier_1" nameInSource="`supplier_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dd3344b1-1d2e-46b3-8896-534aba2466d7" name="supplier_id_1" nameInSource="`supplier_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f0c9a772-2694-4a17-92a0-27adbd31be15" name="connection_direction" nameInSource="`connection_direction`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f8a2b1ad-822a-4523-bb7c-9b7f9ff37b4d" name="product_id_2" nameInSource="`product_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:624e6114-4163-4a2d-b342-6ec7d3b95bb2" name="product_name_2" nameInSource="`product_name_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7b68427f-b591-4ad4-8629-18b0798245fb" name="product_version_id_2" nameInSource="`product_version_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8ff9531f-9cc4-47c6-bb1a-7eea85c49495" name="product_version_name_2" nameInSource="`product_version_name_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0f4ee132-1b60-4165-87dc-97fdfe40b7a4" name="supplier_2" nameInSource="`supplier_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1e21100c-6412-4251-8efe-9b546c49219f" name="supplier_id_2" nameInSource="`supplier_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4b0ef847-9c96-416b-a4bd-0d6d3b95c040" name="norm_or_custom" nameInSource="`norm_or_custom`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5a3e4ce8-9872-4566-8127-5325e2aa148c" name="norm_version" nameInSource="`norm_version`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9b4b8cc9-5cdd-46a2-a2f8-5ae23c681a11" name="norm_version_id" nameInSource="`norm_version_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:acb27815-9e31-4150-850b-b203b525b71d" name="connection_protocol" nameInSource="`connection_protocol`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a79693b9-9ea1-4d90-93b1-320d80a865b0" name="connection_protocol_id" nameInSource="`connection_protocol_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8f4bedb1-3492-4b17-a164-23f513a72867" name="additionial_information" nameInSource="`additionial_information`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:766c6230-0eca-456d-8d5c-6aea3e71fdc9" name="product_version_name_intermediair" nameInSource="`product_version_name_intermediair`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:939adf42-8e18-42c1-b478-c385d51903bf" name="product_version_id_intermediair" nameInSource="`product_version_id_intermediair`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:211f698e-77e9-427f-b8fa-1ec96217d082" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:a6881959-2456-4b05-8869-a99a353b0132" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/46fb0639-b3d2-4d67-9d24-260558b1cd75"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:5d0ed39e-0186-4d69-b6c2-8c1327b3d787" name="csv_leveranciers" nameInSource="`gemma_export_prod`.`csv_leveranciers`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:56121020-21d7-44bc-b942-f0cb1c08fc12" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/24677332-fc02-4652-a173-8adb468cb552">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:65fbfbad-31ec-41c8-aa2a-22f322e43a89" name="supplier_id" nameInSource="`supplier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:187cba8e-4e5b-416e-a5e3-f572feed773b" name="supplier_name" nameInSource="`supplier_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:69b327c4-139f-48b4-97b2-7196cebae3cc" name="supplier_url" nameInSource="`supplier_url`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:43084529-a480-4e9f-a4b9-2feec915f0fa" name="supplier_contact" nameInSource="`supplier_contact`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e97b255d-c9cf-412e-87aa-45020dc5fb61" name="supplier_e_mailadres" nameInSource="`supplier_e_mailadres`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3a6d529e-142e-438d-acd6-bb65220a9a7d" name="supplier_telefoon" nameInSource="`supplier_telefoon`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f2d6edaa-b093-4547-855f-012fdd6a3462" name="signed_addenda" nameInSource="`signed_addenda`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:aacabdaf-c04e-46e2-9de5-424ced0a666a" name="supplier_last_activity" nameInSource="`supplier_last_activity`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c10600d3-9bcd-40f1-81f5-92aa07e1dce6" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:24677332-fc02-4652-a173-8adb468cb552" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/56121020-21d7-44bc-b942-f0cb1c08fc12"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:3c60e5e8-b15c-43af-9dc8-cb4e6a230bbd" name="csv_leveranciers_compliancy" nameInSource="`gemma_export_prod`.`csv_leveranciers_compliancy`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:042b47df-3a87-4408-bbdb-daf83bb03146" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/37293e94-ee4c-41e0-9316-b12e257590bd">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:147ef261-386f-41b9-a45e-35fbf6695aef" name="leverancier_naam" nameInSource="`leverancier_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:519375d5-da75-4dda-b5e4-ca08e21295f9" name="pakket_naam" nameInSource="`pakket_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:11a1ca85-d982-4487-b052-228409e924b2" name="pakketversie_naam" nameInSource="`pakketversie_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:885e04b0-9f49-4257-9e34-2157d4f92450" name="pakketversie_url" nameInSource="`pakketversie_url`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3c971608-f647-4950-8e4f-59c5ef1fab69" name="pakketversie_status" nameInSource="`pakketversie_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:94ec800b-5448-4b56-850a-64b2524aaff8" name="start_ontwikkeling" nameInSource="`start_ontwikkeling`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c76af2c7-300a-40dc-92bd-663f4c153475" name="start_test" nameInSource="`start_test`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:56711c8d-cdec-4037-a7dd-768ebdc23acc" name="start_distributie" nameInSource="`start_distributie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d40eda92-4f91-46c2-9e70-fc25950652d5" name="referentiecomponenten_leverancier" nameInSource="`referentiecomponenten_leverancier`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d05e90e5-4ac0-4803-bc34-66e1f16e52eb" name="referentiecomponenten_gemeente" nameInSource="`referentiecomponenten_gemeente`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5627e2bf-7766-4ac2-ac03-aed198685a80" name="pakket_aantal_gemeenten" nameInSource="`pakket_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:156d99f0-cef1-4467-a256-d1a4e4303ad0" name="pakketversie_aantal_gemeenten" nameInSource="`pakketversie_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c679e348-3e8c-495e-b09c-684ab55a623f" name="ondersteunde_technologie" nameInSource="`ondersteunde_technologie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c415fd4a-9cc5-413f-b258-7f01f6c8be85" name="ondersteuning_standaard_naam" nameInSource="`ondersteuning_standaard_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2d8d9ab7-da53-43f0-b8b8-1a5f4729d5c8" name="ondersteuning_standaardversie" nameInSource="`ondersteuning_standaardversie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:94cacff9-9d17-4e9f-9f81-09fc08c26031" name="compliancy_testrapport_j_n_" nameInSource="`compliancy_testrapport_j_n_`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3c6fa5c6-c6ae-4ca4-a798-57e18e4fd1eb" name="testrapport_url" nameInSource="`testrapport_url`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:205d45a4-f2e2-4112-a3ce-574d73d6d654" name="mutatiedatum_pakket" nameInSource="`mutatiedatum_pakket`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:da6deb30-604b-496c-90cf-7914b411cfba" name="mutatiedatum_pakketversie" nameInSource="`mutatiedatum_pakketversie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:841108f4-5fb6-42de-90f7-af87ad632824" name="ondersteuning_standaardversie_id" nameInSource="`ondersteuning_standaardversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:35becdd9-73e0-4ede-808c-697ba72ee89a" name="leverancier_id" nameInSource="`leverancier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:37d9ef44-9bdd-41b3-a362-b263c1ed09a1" name="pakket_id" nameInSource="`pakket_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cb626aaf-1760-46b6-a2ed-2e9b1721d45b" name="pakketversie_id" nameInSource="`pakketversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:31a0a66e-d13e-4265-8964-1d534e0e7f1c" name="pakketversie_id_fout" nameInSource="`pakketversie_id_fout`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2ad37786-b81d-4685-b5dd-4d29473fe844" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c20c9b4f-aab9-40c3-83f7-cad5e16d2e17" name="compliancy_indicated" nameInSource="`compliancy_indicated`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:37293e94-ee4c-41e0-9316-b12e257590bd" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/042b47df-3a87-4408-bbdb-daf83bb03146"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:2b4efef6-7a28-41d0-9b34-53056f3c0856" name="csv_leveranciers_pakketten" nameInSource="`gemma_export_prod`.`csv_leveranciers_pakketten`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:af41ca3d-df96-481d-804b-efe5226cf099" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/40af1f90-b879-45f7-a289-e2e9518413da">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7c4ea708-1c5e-486b-b75c-1198e5a3cae9" name="leverancier_naam" nameInSource="`leverancier_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:15820ae4-e465-4b6e-a37f-7e8c2dcc0ffe" name="pakket_naam" nameInSource="`pakket_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8da730b4-ee3d-4bfa-98f7-8ba90b2269d2" name="pakketversie_naam" nameInSource="`pakketversie_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:83e52b78-3e41-4b91-8dea-2b7dff567f5f" name="pakket_beschrijving" nameInSource="`pakket_beschrijving`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8bd0907c-768b-4500-a79a-b3496bfa8665" name="pakket_url_productpagina" nameInSource="`pakket_url_productpagina`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b68cfa06-2568-47f2-8eb0-70dac17e0a1a" name="pakketversie_status" nameInSource="`pakketversie_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:74403cbf-ba72-4eeb-81fc-6102a31d223a" name="pakketversie_beschrijving" nameInSource="`pakketversie_beschrijving`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8cb2779f-7b01-4f82-8f27-2747996ddac7" name="start_ontwikkeling" nameInSource="`start_ontwikkeling`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3cd48946-1794-4a96-8487-957b02135da4" name="start_test" nameInSource="`start_test`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:03a5a8c9-7bc0-491f-a8ec-dec9274b7e42" name="start_distributie" nameInSource="`start_distributie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f4df658b-8195-433c-8b27-a70d990f7dfc" name="referentiecomponenten_leverancier" nameInSource="`referentiecomponenten_leverancier`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:1a2b888e-09c6-4b5e-82b6-662b70a55282" name="referentiecomponenten_leverancier_uuid" nameInSource="`referentiecomponenten_leverancier_uuid`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:91dada26-c8f0-4b9f-adfa-60e786718195" name="referentiecomponenten_gemeente" nameInSource="`referentiecomponenten_gemeente`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6c0cb920-d3fa-4987-93e8-a11b4cfc2f81" name="referentiecomponenten_gemeente_uuid" nameInSource="`referentiecomponenten_gemeente_uuid`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5709b3f7-ff75-4707-bccc-39b7fea72bc8" name="pakket_aantal_gemeenten" nameInSource="`pakket_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:be7252f8-efb7-4186-be4e-b3c4b429259e" name="pakketversie_aantal_gemeenten" nameInSource="`pakketversie_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:7b16bdd8-5acc-4578-b0c6-f31e35c86b16" name="pakketversie_ondersteunde_technologie&#xeb;n" nameInSource="`pakketversie_ondersteunde_technologie&#xeb;n`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:545eac5a-69dc-4b04-b95a-2441bccc5188" name="ondersteuning_standaardversies" nameInSource="`ondersteuning_standaardversies`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d1df3491-e9e3-4d08-acd9-59186735057f" name="mutatiedatum_pakket" nameInSource="`mutatiedatum_pakket`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3ec03e5f-227b-475c-92e8-2b45432563c8" name="mutatiedatum_pakketversie" nameInSource="`mutatiedatum_pakketversie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:38f000d3-1be1-4072-920f-28accb123be7" name="leverancier_id" nameInSource="`leverancier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2dad460e-37a6-48f7-9499-dff5e1776d62" name="pakket_id" nameInSource="`pakket_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ce3453d7-418e-42f2-a86a-d3dfa38ec5fb" name="pakketversie_id" nameInSource="`pakketversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d49b2988-5f5a-4f86-822a-5d3adbd4a069" name="pakketversie_id_fout" nameInSource="`pakketversie_id_fout`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c2c4515b-30c2-409c-baa4-c52364a48a47" name="referentiecomponent_id_leverancier" nameInSource="`referentiecomponent_id_leverancier`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fde8093f-07ac-4094-923a-14a5c5e61a07" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8f5fafd0-7ba4-4297-b1c9-a5068a540a1e" name="referentiecomponenten_id_gemeente" nameInSource="`referentiecomponenten_id_gemeente`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:40af1f90-b879-45f7-a289-e2e9518413da" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/af41ca3d-df96-481d-804b-efe5226cf099"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:c229d31a-8120-4c9c-85f4-b8d681860b45" name="csv_marktscan" nameInSource="`gemma_export_prod`.`csv_marktscan`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:f9215f7c-5cb5-41d2-a995-54a6e5a900ee" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/9d0f18bc-3efc-408d-93d8-c2bd02916759">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fc34aa71-5d3a-47dc-8f57-bbc5dbe34073" name="gemeente_naam" nameInSource="`gemeente_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2a4faca0-313d-42b3-9702-6524aa059c4e" name="gemeente_cbs" nameInSource="`gemeente_cbs`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ff24ee22-2d0e-4481-b22b-7733f86b6f49" name="samenwerking" nameInSource="`samenwerking`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3ed35edf-5984-45fa-b1a5-a3fc880f4890" name="gebruik_status" nameInSource="`gebruik_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:33cc8dbd-3632-41a8-afa1-ae48bc7a88b9" name="gebruik_datum_ingang_status" nameInSource="`gebruik_datum_ingang_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:19c71c60-c113-46ce-a9bf-8c3a4e8b0c6d" name="leverancier_naam" nameInSource="`leverancier_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:156e6134-01c0-4da4-bcd9-ee6d8322187c" name="pakket_naam" nameInSource="`pakket_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:482a0669-3107-43da-8845-eaf15ead0a37" name="pakketversie_naam" nameInSource="`pakketversie_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:42434090-3e6d-4784-86c2-f0a6d1bf5ce4" name="pakketversie_status" nameInSource="`pakketversie_status`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c741384e-81ac-4012-a77b-820b489e7fa8" name="pakketversie_beschrijving" nameInSource="`pakketversie_beschrijving`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c639e5ad-b14a-4991-abd5-054b95ff99b1" name="start_ontwikkeling" nameInSource="`start_ontwikkeling`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0547fbf6-01da-4dd6-897d-53b38eded581" name="start_test" nameInSource="`start_test`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:160c33b6-c041-4a44-a0b4-ecfa775f2ab9" name="start_distributie" nameInSource="`start_distributie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6397c6e9-bd01-4b40-b369-58f37e5628c3" name="pakket_aantal_gemeenten" nameInSource="`pakket_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:46dd11dc-5498-4a2a-b699-357d4fa6c779" name="pakketversie_aantal_gemeenten" nameInSource="`pakketversie_aantal_gemeenten`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a24dea65-b606-4e15-b48c-0cb6d94fd83d" name="ondersteuning_standaard_naam" nameInSource="`ondersteuning_standaard_naam`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2830e34b-de38-43cf-abda-a67a8b23d9a2" name="ondersteuning_standaardversie" nameInSource="`ondersteuning_standaardversie`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cbf5e835-0428-4f0c-a715-656b88aa5a5b" name="compliancy_testrapport_j_n_" nameInSource="`compliancy_testrapport_j_n_`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cee37984-52b1-4781-a120-861c53a9a446" name="testrapport_url" nameInSource="`testrapport_url`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:21231f4e-a7e5-445d-88af-96f9b2298ebe" name="mutatiedatum_applicatieportfolio" nameInSource="`mutatiedatum_applicatieportfolio`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4d7affbd-f9d4-4b08-8329-5456c34c6dcf" name="extern_pakket_j_n_" nameInSource="`extern_pakket_j_n_`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8c0e59d2-dff3-4595-ab40-fbcf8d6b57a8" name="ondersteuning_standaardversie_id" nameInSource="`ondersteuning_standaardversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9901a3e1-7f13-41da-b829-7f9b7914b91f" name="leverancier_id" nameInSource="`leverancier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:13cda460-e733-4599-b3ca-bc05771cab9e" name="pakket_id" nameInSource="`pakket_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a3aad2ee-2b70-4353-a53a-5b4436f20360" name="pakketversie_id" nameInSource="`pakketversie_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8f6181ea-0817-4bc2-94d8-f2de41e665e4" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:9d0f18bc-3efc-408d-93d8-c2bd02916759" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/f9215f7c-5cb5-41d2-a995-54a6e5a900ee"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:97b8b7e7-f413-48d6-ab58-b4ededa92ab4" name="csv_mijn_koppelingen" nameInSource="`gemma_export_prod`.`csv_mijn_koppelingen`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:aefa53f8-d5d0-421c-a1de-84e037284da0" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/7b8fa904-4727-4250-845a-1b5cae5d4497">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9ef10e43-8147-4b5d-bf21-91df96a6e06f" name="connection_id" nameInSource="`connection_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5300e0c3-94df-4fb0-a92e-85d7886560f7" name="organisation" nameInSource="`organisation`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:545657d2-8a8d-4caf-b973-2164ec6c67cd" name="connection_state" nameInSource="`connection_state`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f31edd89-d898-462b-8f55-5473d9adadbb" name="state_date" nameInSource="`state_date`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:bdc3697d-2d24-483f-91c2-d09fddba0ac5" name="product_id_1" nameInSource="`product_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ac07b710-8b00-4c69-8b13-0b18b9d18bb7" name="product_name_1" nameInSource="`product_name_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b13145f9-a770-4f77-acbc-98f0737dd68d" name="product_version_id_1" nameInSource="`product_version_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5a32b60d-6a9b-4178-a8ea-804ab9c3083d" name="product_version_name_1" nameInSource="`product_version_name_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cfb7c59b-0fd7-40f1-8d9f-9158fce43777" name="supplier_1" nameInSource="`supplier_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:92da9399-f903-497c-af09-b306cf763a9a" name="supplier_id_1" nameInSource="`supplier_id_1`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:03b1c2d8-0524-4986-84cf-5a550fa03dd7" name="connection_direction" nameInSource="`connection_direction`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c4dde5ba-4b6a-4bb0-aa9e-6275a0f9c763" name="product_id_2" nameInSource="`product_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:170925a6-30f1-436f-9c05-839eefcb6de9" name="product_name_2" nameInSource="`product_name_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3ed29767-23eb-41f4-962d-e527f8c95b35" name="product_version_id_2" nameInSource="`product_version_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:33ffe3b5-900e-42ba-a5ed-2a3c0cefd4e0" name="product_version_name_2" nameInSource="`product_version_name_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:58ceb061-1208-43fb-92e2-9684ed01f6af" name="supplier_2" nameInSource="`supplier_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8094aff6-7b6c-490b-bf0d-559ffaa64952" name="supplier_id_2" nameInSource="`supplier_id_2`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cf05de9a-c6c9-4cdc-b9ee-4763cf76e82d" name="norm_or_custom" nameInSource="`norm_or_custom`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:941f03f3-b8c9-4cb7-bb81-34c18c19f29c" name="norm_version" nameInSource="`norm_version`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:804ac142-d00a-40af-9cf8-2943e6c7baae" name="norm_version_id" nameInSource="`norm_version_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:aac16236-3963-4b97-942d-4239cb19e2df" name="connection_protocol" nameInSource="`connection_protocol`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:96388cfc-7072-4035-a7ed-c12e5d0eb8b0" name="connection_protocol_id" nameInSource="`connection_protocol_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:308874b7-7b65-4aac-9ecf-512520674fc5" name="additionial_information" nameInSource="`additionial_information`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:0bb962f6-bb72-4356-9c9a-14c266194a7e" name="product_version_name_intermediair" nameInSource="`product_version_name_intermediair`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ef59b5a1-0817-4ec6-ac54-db406dd0184f" name="product_version_id_intermediair" nameInSource="`product_version_id_intermediair`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9da18648-6958-4a9e-8cc2-40394f2df91c" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:791a66e1-41ae-4292-af47-4fd62d149290" name="municipalities" nameInSource="`municipalities`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:7b8fa904-4727-4250-845a-1b5cae5d4497" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/aefa53f8-d5d0-421c-a1de-84e037284da0"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:a32d8958-52d2-471c-9a67-4c758c88f3bb" name="csv_pakketten" nameInSource="`gemma_export_prod`.`csv_pakketten`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:1b2c2063-c5b3-42ec-a4a3-0cab112159bf" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/603483f5-42b1-4301-9ce2-39d5c6cfb3cd">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d00f2301-d42d-436c-8224-e72a86d71613" name="software_id" nameInSource="`software_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:dc98926a-b30a-4465-9b67-571264718456" name="software_name" nameInSource="`software_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c1f199dd-d7e4-42bf-9d3a-ad498265ab51" name="software_description" nameInSource="`software_description`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fe5c7e65-ef3f-4823-9df8-0cba791dab0b" name="software_url" nameInSource="`software_url`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:73a9053a-2004-4b79-bee1-f8a7bba826b3" name="supplier_id" nameInSource="`supplier_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c4a31cf1-c1bb-4b49-bd28-01a479c00442" name="software_version" nameInSource="`software_version`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cea0d4f5-0aa0-4f95-ba62-3e9978d4088d" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:603483f5-42b1-4301-9ce2-39d5c6cfb3cd" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/1b2c2063-c5b3-42ec-a4a3-0cab112159bf"/>
+  </relational:BaseTable>
+  <relational:BaseTable xmi:uuid="mmuuid:1099eb45-2168-4639-bf0c-e0fea4ad584d" name="csv_samenwerkingen" nameInSource="`gemma_export_prod`.`csv_samenwerkingen`" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:14584aae-073d-4d71-8630-a5640d7ab853" name="swc_export_id" nameInSource="`swc_export_id`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" uniqueKeys="mmuuid/2412f706-5185-46ed-a1c6-054bd92c60d0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cc92a11b-db42-4678-9183-79dba9de8e6e" name="collaboration_id" nameInSource="`collaboration_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e7d4f50e-2eda-48ff-8f4f-4910b7ac2b6c" name="collaboration_name" nameInSource="`collaboration_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:a017c92b-5187-4470-955f-35570e01484b" name="collaboration_type" nameInSource="`collaboration_type`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:387e5863-659c-4a5f-9ae6-8ab5be0998be" name="contact_name" nameInSource="`contact_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c60155cd-b232-4698-bfc9-9f9dbe20d2e7" name="contact_email" nameInSource="`contact_email`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:debebafc-7018-418e-bea6-842d52c52e68" name="organisations_name" nameInSource="`organisations_name`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:17fcde52-9d25-48ff-a155-f18e71e86d97" name="organisations_id" nameInSource="`organisations_id`" nativeType="TEXT" length="65535">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6d923be6-4549-4e42-a493-a64488ae3f7f" name="export_timestamp" nameInSource="`export_timestamp`" nativeType="INT UNSIGNED" length="10" fixedLength="true" nullable="NO_NULLS" defaultValue="0">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:2412f706-5185-46ed-a1c6-054bd92c60d0" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/14584aae-073d-4d71-8630-a5640d7ab853"/>
+  </relational:BaseTable>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:e147ccf5-fd87-48ff-b55f-6aedaa329bb1"/>
+  <jdbc:JdbcSource xmi:uuid="mmuuid:59a9c46c-0ecf-4b19-8e1d-e4197e0f6fb7" name="GEMMA_DS" driverName="MySQL JDBC Driver" driverClass="com.mysql.jdbc.Driver" username="gemma_export_redhat" url="jdbc:mysql://37.230.101.37:3306/gemma_export_prod">
+    <importSettings xmi:uuid="mmuuid:4aecfba0-fd8d-484c-b3fe-282099a1d7af" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
+      <includedCatalogPaths>/gemma_export_prod</includedCatalogPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_inconsistency</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_new_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_new_product_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_new_suggestion_by_supplier</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_new_supplier</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/message_update_product_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_collaboration</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_convenant</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_data_group</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_external_component</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_external_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_municipality</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_norm</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_norm_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_page</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_reference_component</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_software_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_software_product_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_supplier</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/node_technology_component</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/plain_role</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/plain_swc_log</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_collaboration_uses_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_covers</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_gemma_product_component</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_gemma_uses_component</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_gemma_uses_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_norm_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_organisation_uses_connection</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_product_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_productversion_connection</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_provides_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_reference_version</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_relevant</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_requires</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_signed</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_supports</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_uses</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/relation_uses_data</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/swc_suggestion_supplier_suggestion</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_addenda</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_application_function</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_business_function</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_collaboration_type</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_file_tags</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_lice_cycle</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_norm_classification</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_organization_level</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_planning</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_position</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_role</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_role_data</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_scald_authors</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_state_connection</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_state_norm</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_state_product</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_state_product_use</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_state_reference</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_support</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_technology_type</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/taxonomy_term_transport_protocol</excludedObjectPaths>
+      <excludedObjectPaths>/gemma_export_prod/TABLE/user_user</excludedObjectPaths>
+      <includedTableTypes>TABLE</includedTableTypes>
+    </importSettings>
+  </jdbc:JdbcSource>
+</xmi:XMI>

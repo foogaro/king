@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:eecd3bae-6ed2-474d-a111-e6d9c5d044ca" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:6d540bd7-dee1-4ee1-a8a3-62e159829b4b" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:3761947c-45f9-4764-a6f4-390f67201f7d"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:8b6ad24e-6620-48d5-8103-e1bfc71d4770"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:7f4f3ac6-036c-406a-b062-328e94fd38e3">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:81dd8fc8-ada7-4ff6-8669-04e6aa12ba9b" outputs="mmuuid/177f653e-c3b1-42df-940e-98722340ac23" target="mmuuid/177f653e-c3b1-42df-940e-98722340ac23">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:58b2add2-1df7-490e-977e-8b9b42b0c2b3">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:02ea1074-c660-40a9-89b8-0a419ed15b3b" selectSql="BEGIN&#xa;&#x9;DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', ViewModel.GetSurvey.surveyId AS surveyId,  || '/' || ViewModel.GetSurvey.surveyIdViewModel.GetSurvey.format AS format,  || '/' || ViewModel.GetSurvey.format);&#xa;&#x9;SELECT &#xa;&#x9;A.response AS response&#xa;FROM&#xa;&#x9;(EXEC WSJG_API_DS.invokeHttp(action=>'GET',endpoint=>VARIABLES.qp,stream=>'TRUE',headers=>'{&quot;X-API-TOKEN&quot;:&quot;VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C&quot;}')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()') AS A;&#xa;END"/>
+      </helper>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:Procedure xmi:uuid="mmuuid:177f653e-c3b1-42df-940e-98722340ac23" name="GetSurvey">
+    <parameters xmi:uuid="mmuuid:52c2c2af-8082-49fd-aacd-2ebf79aed43c" name="surveyId">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:65a46bd7-3029-45fc-890f-84daa4217447" name="format">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:157a3da4-014e-4b10-828c-c0edf3c33544" name="Result">
+      <columns xmi:uuid="mmuuid:57339fe9-53d9-4dcf-a943-d5fcc410c2c0" name="response" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+</xmi:XMI>

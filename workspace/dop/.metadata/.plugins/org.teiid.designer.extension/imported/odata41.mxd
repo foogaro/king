@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modelExtension xmlns:p="http://www.jboss.org/teiiddesigner/ext/2012" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" metamodelUri="http://www.metamatrix.com/metamodels/Relational" namespacePrefix="odata4" namespaceUri="http://www.teiid.org/translator/odata4/2014" version="1" xsi:schemaLocation="http://www.jboss.org/teiiddesigner/ext/2012 http://www.jboss.org/teiiddesigner/ext/2012/modelExtension.xsd" xmlns="http://www.jboss.org/teiiddesigner/ext/2012">
+    <p:modelType>PHYSICAL</p:modelType>
+    <p:extendedMetaclass name="org.teiid.designer.metamodels.relational.impl.ColumnImpl">
+        <p:property advanced="false" index="true" masked="false" name="PSEUDO" required="false" type="string"/>
+    </p:extendedMetaclass>
+    <p:extendedMetaclass name="org.teiid.designer.metamodels.relational.impl.ProcedureImpl">
+        <p:property advanced="false" index="true" masked="false" name="NameInSchema" required="true" type="string"/>
+        <p:property advanced="false" index="true" masked="false" name="Type" required="true" type="string">
+            <p:allowedValue>COMPLEX</p:allowedValue>
+            <p:allowedValue> NAVIGATION</p:allowedValue>
+            <p:allowedValue> COMPLEX_COLLECTION</p:allowedValue>
+            <p:allowedValue> ENTITY_COLLECTION</p:allowedValue>
+            <p:allowedValue> NAVIGATION_COLLECTION</p:allowedValue>
+            <p:allowedValue> ENTITY</p:allowedValue>
+            <p:allowedValue> FUNCTION</p:allowedValue>
+            <p:allowedValue> ACTION</p:allowedValue>
+        </p:property>
+    </p:extendedMetaclass>
+    <p:extendedMetaclass name="org.teiid.designer.metamodels.relational.impl.BaseTableImpl">
+        <p:property advanced="false" index="true" masked="false" name="MERGE" required="false" type="string"/>
+        <p:property advanced="false" index="true" masked="false" name="NameInSchema" required="true" type="string"/>
+        <p:property advanced="false" index="true" masked="false" name="Type" required="true" type="string">
+            <p:allowedValue>COMPLEX</p:allowedValue>
+            <p:allowedValue> NAVIGATION</p:allowedValue>
+            <p:allowedValue> COMPLEX_COLLECTION</p:allowedValue>
+            <p:allowedValue> ENTITY_COLLECTION</p:allowedValue>
+            <p:allowedValue> NAVIGATION_COLLECTION</p:allowedValue>
+            <p:allowedValue> ENTITY</p:allowedValue>
+            <p:allowedValue> FUNCTION</p:allowedValue>
+            <p:allowedValue> ACTION</p:allowedValue>
+        </p:property>
+    </p:extendedMetaclass>
+</modelExtension>

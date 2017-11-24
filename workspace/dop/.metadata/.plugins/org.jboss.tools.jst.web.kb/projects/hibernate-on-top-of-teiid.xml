@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/Jaap/.m2/repository/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.1.Final/jboss-annotations-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/junit/junit/4.11/junit-4.11.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  <path value="/hibernate-on-top-of-teiid/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="hibernate-on-top-of-teiid"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Jaap/.m2/repository/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/hibernate/hibernate-validator/4.3.2.Final/hibernate-validator-4.3.2.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.2.Final/jboss-ejb-api_3.1_spec-1.0.2.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/jboss/logging/jboss-logging/3.1.4.GA/jboss-logging-3.1.4.GA.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.1.Final/jboss-interceptors-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/Jaap/.m2/repository/org/hibernate/hibernate-core/4.2.20.Final/hibernate-core-4.2.20.Final.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core">
+   <linked-resource declaration="true" name="%1;%2;" path="%0"/>
+   <linked-resource name="%0;%4;" path="%3"/>
+   <linked-resource declaration="true" name="%5;" path="%4"/>
+  </core>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="32" name="%6" offset="1511" path="%7"/>
+   <linked-el length="52" name="%6" offset="2775" path="%7"/>
+   <linked-el length="46" name="%6" offset="3047" path="%7"/>
+   <linked-el length="27" name="%6" offset="1853" path="%7"/>
+   <linked-el length="43" name="%6" offset="2643" path="%7"/>
+   <linked-el length="23" name="%6" offset="1142" path="%7"/>
+   <linked-el length="47" name="%6" offset="2918" path="%7"/>
+   <linked-el length="32" name="%0" offset="1511" path="%7"/>
+   <linked-el length="34" name="%0" offset="2073" path="%7"/>
+   <linked-el length="27" name="%0" offset="1853" path="%7"/>
+   <linked-el length="23" name="%0" offset="1142" path="%7"/>
+   <linked-el length="21" name="%8" offset="3132" path="%9"/>
+   <linked-el length="21" name="%10" offset="3132" path="%9"/>
+   <linked-el length="26" name="%11" offset="4274" path="%9"/>
+   <linked-el length="26" name="%12" offset="4274" path="%9"/>
+   <linked-el length="77" name="%13" offset="2198" path="%7"/>
+   <linked-el length="32" name="%1" offset="1511" path="%7"/>
+   <linked-el length="27" name="%1" offset="1853" path="%7"/>
+   <linked-el length="23" name="%1" offset="1142" path="%7"/>
+   <linked-el length="77" name="%14" offset="2198" path="%7"/>
+   <linked-el length="26" name="%15" offset="4274" path="%9"/>
+   <linked-el length="34" name="%2" offset="2073" path="%7"/>
+   <linked-el length="52" name="%5" offset="2775" path="%7"/>
+   <linked-el length="46" name="%5" offset="3047" path="%7"/>
+   <linked-el length="23" name="%5" offset="2383" path="%7"/>
+   <linked-el length="27" name="%5" offset="2511" path="%7"/>
+   <linked-el length="27" name="%5" offset="2547" path="%7"/>
+   <linked-el length="43" name="%5" offset="2643" path="%7"/>
+   <linked-el length="47" name="%5" offset="2918" path="%7"/>
+   <linked-el length="77" name="%16" offset="2198" path="%7"/>
+   <linked-el length="23" name="%4" offset="2383" path="%7"/>
+   <linked-el length="27" name="%4" offset="2511" path="%7"/>
+   <linked-el length="27" name="%4" offset="2547" path="%7"/>
+   <linked-el length="26" name="%17" offset="4274" path="%9"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/hibernate-on-top-of-teiid/pom.xml" value="%9"/>
+  <alias
+   path="/hibernate-on-top-of-teiid/src/main/java/com/client/quickstart/hibernate4/model/ProductInfo.java" value="%6"/>
+  <alias
+   path="/hibernate-on-top-of-teiid/src/main/java/com/client/quickstart/hibernate4/controller/ProductRegistration.java" value="%0"/>
+  <alias path="project.artifactId" value="%8"/>
+  <alias path="project" value="%10"/>
+  <alias path="version.jboss.as.plugin" value="%11"/>
+  <alias path="version" value="%12"/>
+  <alias path="facesContext.messageList" value="%13"/>
+  <alias path="newProductInfo" value="%1"/>
+  <alias path="facesContext" value="%14"/>
+  <alias path="version.jboss" value="%15"/>
+  <alias path="productRegistration" value="%2"/>
+  <alias path="productInfos" value="%5"/>
+  <alias path="/hibernate-on-top-of-teiid/src/main/webapp/index.xhtml" value="%7"/>
+  <alias
+   path="/hibernate-on-top-of-teiid/src/main/java/com/client/quickstart/hibernate4/util/Resources.java" value="%3"/>
+  <alias
+   path="/hibernate-on-top-of-teiid/src/main/java/com/client/quickstart/hibernate4/data/ProductListProducer.java" value="%4"/>
+  <alias path="facesContext.postback" value="%16"/>
+  <alias path="version.jboss.as" value="%17"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

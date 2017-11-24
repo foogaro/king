@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modelExtension xmlns:p="http://www.jboss.org/teiiddesigner/ext/2012" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" metamodelUri="http://www.metamatrix.com/metamodels/Relational" namespacePrefix="jpa2" namespaceUri="http://www.teiid.org/translator/jpa2/2014" version="1" xsi:schemaLocation="http://www.jboss.org/teiiddesigner/ext/2012 http://www.jboss.org/teiiddesigner/ext/2012/modelExtension.xsd" xmlns="http://www.jboss.org/teiiddesigner/ext/2012">
+    <p:modelType>PHYSICAL</p:modelType>
+    <p:extendedMetaclass name="org.teiid.designer.metamodels.relational.impl.ColumnImpl">
+        <p:property advanced="false" index="true" masked="false" name="assosiated_with_table" required="false" type="string"/>
+    </p:extendedMetaclass>
+    <p:extendedMetaclass name="org.teiid.designer.metamodels.relational.impl.BaseTableImpl">
+        <p:property advanced="false" index="true" masked="false" name="entity_class" required="true" type="string"/>
+    </p:extendedMetaclass>
+</modelExtension>

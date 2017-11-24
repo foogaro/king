@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.teiid.designer.transformation.ui.reconciler.ReconcilerDialog">
+		<item value="720" key="shellHeight"/>
+		<item value="3168" key="shellX"/>
+		<item value="330" key="shellY"/>
+		<item value="1502" key="shellWidth"/>
+	</section>
+	<section name="org.teiid.designer.transformation.ui.reconciler.datatype.DatatypeReconcilerDialog1">
+		<item value="1008" key="shellHeight"/>
+		<item value="3329" key="shellX"/>
+		<item value="169" key="shellY"/>
+		<item value="1089" key="shellWidth"/>
+	</section>
+	<section name="org.teiid.designer.transformation.ui.wizards.file.TeiidMetadataImportWizard">
+		<item value="748" key="width"/>
+		<item value="929" key="height"/>
+	</section>
+	<section name="org.teiid.designer.transformation.ui.wizards.rest.TeiidRestImportWizard">
+		<item value="921" key="width"/>
+		<item value="840" key="height"/>
+	</section>
+</section>

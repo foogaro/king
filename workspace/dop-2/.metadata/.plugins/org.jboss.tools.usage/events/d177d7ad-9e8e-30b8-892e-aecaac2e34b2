@@ -1,0 +1,11 @@
+#Tue Nov 21 16:56:57 CET 2017
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1511279817664
+c=0
+cmp=usage
+a=finishWizard
+cl=org.teiid.designer.ui.wizards.NewModelProjectWizard
+v=2.2.4
+s=2

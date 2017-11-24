@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:cc20b44c-8d58-4dbc-aee3-71486209acf1" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143"/>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:d64cf2be-924e-446b-a227-9156d8af6b18">
+    <annotations xmi:uuid="mmuuid:6b90415a-2ea4-4e53-84b6-154b49e7e6f2" annotatedObject="mmuuid/cc20b44c-8d58-4dbc-aee3-71486209acf1">
+      <tags xmi:uuid="mmuuid:5866f4a9-5a89-4b5c-b53f-18e472d77674" key="connection:FlatFileHomeUrl" value="C:\Users\Jaap\Desktop\Luigi\docs"/>
+      <tags xmi:uuid="mmuuid:7d9fdf19-4d11-40e9-a644-945662155a20" key="connectionProfile:connectionProfileName" value="TOT2017Q1_DS"/>
+      <tags xmi:uuid="mmuuid:25901d62-a555-43a6-ac63-c48882ae8dc9" key="connection:FlatFileDelimeter" value="COMMA"/>
+      <tags xmi:uuid="mmuuid:1896cf48-162e-4bb2-81af-909db3d87e85" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+      <tags xmi:uuid="mmuuid:bf47d9bf-423e-4654-b293-22e75b744068" key="translator:name" value="file"/>
+      <tags xmi:uuid="mmuuid:e07f573f-38ab-4704-966e-889b61402918" key="connection:FlatFileSecondLineDataType" value="NO"/>
+      <tags xmi:uuid="mmuuid:ecbeee60-1129-41cd-9177-ddadfa3c2839" key="connectionProfile:connectionProfileInstanceID" value="2ab1e711-d02c-11e7-aad2-846e91d21eea"/>
+      <tags xmi:uuid="mmuuid:afb4fe64-f433-4cf8-a2d2-f6c22964d49b" key="connection:FlatFileCharSet" value="UTF-8"/>
+      <tags xmi:uuid="mmuuid:74474551-26d6-4e56-89b9-b3889b43cb6e" key="connection:FlatFileFirstLineColumnName" value="YES"/>
+      <tags xmi:uuid="mmuuid:c379de2d-01a3-4f78-bced-06d1e6399d0d" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:572e30f4-3691-419d-bda6-a8059b3ee5f0" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+      <tags xmi:uuid="mmuuid:492dfe72-9e16-4ca4-b794-3d83673215cb" key="connection:JBossDsJndi" value="TOT2017Q1_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:555e5e86-a6d1-4838-a49e-34d8830ff8ee"/>
+</xmi:XMI>

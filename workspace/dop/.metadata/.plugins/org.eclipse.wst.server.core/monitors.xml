@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<monitors>
+  <monitor port="5604" portId="2" serverId="Red Hat JBoss EAP 6.1+1511189477141" started="true"/>
+</monitors>

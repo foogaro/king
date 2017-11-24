@@ -1,0 +1,145 @@
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLDecoder;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+
+public class ExportClient
+{
+  private static final String SURVEY_ID = "SV_4Ghb7o6NMHzAr3L";
+  private static final String API_TOKEN = "VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C";
+  private static final String DATA_CENTER = "kng";
+  
+  private static HttpClient httpClient;
+  private static ObjectMapper mapper;
+
+ 
+  public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException
+  {
+	  String q =  "\\'|&`^\"<>)(}{][";
+	  String url = "http://test.com/?q=" + q + "#" + q;
+	  String eic = encodeIllegalChar(url,"UTF-8");
+	  System.out.println(String.format("  original:%s",url));
+	  System.out.println(String.format("   encoded:%s",eic));
+	  System.out.println(String.format("   uri-obj:%s",new URI(eic)));
+	  System.out.println(String.format("re-decoded:%s",URLDecoder.decode(eic)));
+	  
+	  /*
+    httpClient = HttpClientBuilder.create().build();
+    mapper = new ObjectMapper();
+
+    // Step 1: Start the export
+      URI uri = new URIBuilder()
+        .setScheme("https")
+        .setHost(String.format("%s.qualtrics.com", DATA_CENTER))
+        .setPath("/API/v3/responseexports")
+        .build();
+      System.out.println("uri: " + uri);
+
+    HttpPost post = new HttpPost(uri);
+    post.setHeader("X-API-TOKEN", API_TOKEN);
+    post.setHeader("Content-Type", "application/json");
+    
+    StringEntity body = new StringEntity(String.format("{ \"format\": \"csv\", \"surveyId\": \"%s\" }", SURVEY_ID));
+    System.out.println("body: " + body);
+    post.setEntity(body);
+    JsonNode responseJson = sendResponseEngineRequest(post);
+    System.out.println("responseJson: " + responseJson);
+    String exportId = responseJson.get("result").get("id").asText();
+    URI exportStatusUrl = new URIBuilder()
+        .setScheme("https")
+        .setHost(String.format("%s.qualtrics.com", DATA_CENTER))
+        .setPath("/API/v3/responseexports/" + exportId)
+        .build();
+
+    // Step 2: Wait for the export to complete
+    String fileUrl;
+    while (true)
+    {
+      HttpGet statusGet = new HttpGet(exportStatusUrl);
+      statusGet.setHeader("X-API-TOKEN", API_TOKEN);
+      JsonNode statusJson = sendResponseEngineRequest(statusGet);
+      System.out.println("statusJson: " + statusJson);
+      if (statusJson.get("result").get("percentComplete").asInt() == 100)
+      {
+        fileUrl = statusJson.get("result").get("file").asText();
+        break;
+      }
+      Thread.sleep(2000);
+    }
+    System.out.println("fileUrl: " + fileUrl);
+
+    // Step 3: Download the exported file
+    HttpGet statusGet = new HttpGet(fileUrl);
+    statusGet.setHeader("X-API-TOKEN", API_TOKEN);
+    HttpResponse response = httpClient.execute(statusGet);
+
+    // Step 4: Extract exported file
+    ZipInputStream zs = new ZipInputStream(response.getEntity().getContent());
+    ZipEntry entry;
+    while ((entry = zs.getNextEntry()) != null)
+    {
+        System.out.println("filename: " +  entry.getName());
+        FileOutputStream out = new FileOutputStream("C:\\Users\\Jaap\\" + entry.getName());
+		  IOUtils.copy(zs, out);
+		  out.close();
+    }
+    System.out.println("Done!");
+    */
+  }
+
+  private static JsonNode sendResponseEngineRequest(HttpRequestBase httpRequest) throws IOException
+  {
+    HttpResponse response = httpClient.execute(httpRequest);
+    String body = EntityUtils.toString(response.getEntity());
+    return mapper.readTree(body);
+  }
+  
+  private static String encodeIllegalChar(String uriStr,String enc)
+		  throws URISyntaxException,UnsupportedEncodingException {
+	  String _uriStr = uriStr;
+	  int retryCount = 17;
+	  while(true){
+	     try{
+	       new URI(_uriStr);
+	       break;
+	     }catch(URISyntaxException e){
+	       String reason = e.getReason();
+	       if(reason == null ||
+	         !(
+	          reason.contains("in path") ||
+	          reason.contains("in query") ||
+	          reason.contains("in fragment")
+	         )
+	       ){
+	         throw e;
+	       }
+	       if(0 > retryCount--){
+	         throw e;
+	       }
+	       String input = e.getInput();
+	       int idx = e.getIndex();
+	       String illChar = String.valueOf(input.charAt(idx));
+	       _uriStr = input.replace(illChar,URLEncoder.encode(illChar,enc));
+	     }
+	  }
+	  return _uriStr;
+	}
+}

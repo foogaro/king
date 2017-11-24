@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="DOP" version="1">
+	<description/>
+	<model name="WSJG_API_DS">
+		<source connection-jndi-name="java:/WSJG_API_DS" name="WSJG_API_DS" translator-name="ws"/>
+	</model>
+	<model name="WSJG_API" type="VIRTUAL">
+		<metadata type="DDL"><![CDATA[
+			CREATE VIRTUAL PROCEDURE GetSurvey (
+				IN surveyId string NOT NULL,
+				IN format string NOT NULL
+			) RETURNS
+				TABLE (
+					response string(4000)
+			) OPTIONS(UPDATECOUNT '1')
+				AS
+			BEGIN
+				DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', WSJG_API.GetSurvey.surveyId AS surveyId, WSJG_API.GetSurvey.format AS format);
+				SELECT A.response AS response FROM (EXEC WSJG_API_DS.invokeHttp(action => 'POST', endpoint => VARIABLES.qp, stream => 'TRUE', headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()') AS A;
+			END;	
+		]]></metadata>
+	</model>
+	<translator name="WSJG_API_DS" type="ws">
+		<property name="importWSDL" value="false" />
+		<property name="DefaultBinding" value="HTTP"/>
+		<property name="DefaultServiceMode" value="MESSAGE"/>
+	</translator>
+</vdb>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:5a7a17fd-3d2d-4b70-ae48-d6d14cd4bea7" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143"/>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:6a288954-6fb2-4ed4-be56-06db84a2209a">
+    <annotations xmi:uuid="mmuuid:ccfd34db-43ad-4508-bf8a-a6663d832d75" annotatedObject="mmuuid/5a7a17fd-3d2d-4b70-ae48-d6d14cd4bea7">
+      <tags xmi:uuid="mmuuid:81fe43ed-54d2-4ad7-aa31-c0db0c0c34a4" key="connectionProfile:connectionProfileProviderId" value="org.teiid.designer.datatools.profiles.ws.WSConnectionProfile"/>
+      <tags xmi:uuid="mmuuid:bdfba698-f61a-4265-bd88-3587ff5302a9" key="connection:SecurityType" value="None"/>
+      <tags xmi:uuid="mmuuid:98f737fc-fbb3-4f0d-94bf-6ea1370edefb" key="connectionProfile:connectionProfileName" value="WSJG"/>
+      <tags xmi:uuid="mmuuid:7a87687d-475c-4c76-bef7-cf3636a762ea" key="connection:EndPoint" value="https://kng.qualtrics.com/API/v3/responseexports"/>
+      <tags xmi:uuid="mmuuid:fb42c6f7-e91a-4c1d-90f1-5da48fa01ac6" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:1182d6de-0413-4814-ae23-b4b961dcc73e" key="connectionProfile:connectionProfileInstanceID" value="4f629bb1-cdfa-11e7-b54e-a4a588275ec8"/>
+      <tags xmi:uuid="mmuuid:58042314-a1fe-474a-b685-facae3d88eba" key="connectionProfile:connectionProfileCategory" value="org.teiid.designer.import.category"/>
+      <tags xmi:uuid="mmuuid:05d82a72-aacc-42cc-aa8d-c020dfb25bfe" key="translator:name" value="ws"/>
+      <tags xmi:uuid="mmuuid:e8f6d687-d1ec-4e02-bc9f-c52fc6f6549b" key="connection:JBossDsJndi" value="WSJG_API_DS_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:0766e354-a4b8-4062-b60f-8adae792d2da"/>
+</xmi:XMI>

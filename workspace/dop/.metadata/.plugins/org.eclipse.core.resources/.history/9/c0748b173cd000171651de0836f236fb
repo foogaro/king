@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:3ee5d3b8-cb3e-4f96-a312-28fce7d04257" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:84104168-1b1f-4e73-95bd-3c99e8dec8ea" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:25c81965-16a0-4fc7-a90f-141ced148aee" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:2a70f158-a79d-4627-a7fd-9c62e2b503ad">
+    <annotations xmi:uuid="mmuuid:eb17e063-06ec-4290-8b0a-d7ef63647c8a" annotatedObject="mmuuid/3ee5d3b8-cb3e-4f96-a312-28fce7d04257">
+      <tags xmi:uuid="mmuuid:1a487e03-6ea1-475a-bc6f-b01655eedb03" key="connectionProfile:connectionProfileProviderId" value="org.teiid.designer.datatools.profiles.flatfile.fileurl"/>
+      <tags xmi:uuid="mmuuid:9ccf3062-b8ac-4190-a6e1-966277755b29" key="connectionProfile:connectionProfileName" value="TOT2017Q1_REMOTE_DS"/>
+      <tags xmi:uuid="mmuuid:00e714e1-faca-4696-9ae3-c23b09a08afd" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:eb97f83a-4898-4044-a92f-e75d7f09c2a0" key="connectionProfile:connectionProfileInstanceID" value="29060e01-d03b-11e7-a8e5-a8f19f4bba12"/>
+      <tags xmi:uuid="mmuuid:218bc988-acd3-4a90-ac74-e851522d168c" key="connectionProfile:connectionProfileCategory" value="org.teiid.designer.import.category"/>
+      <tags xmi:uuid="mmuuid:8fd0d88f-eb6a-4246-bee7-0b85eb09c118" key="translator:name" value="ws"/>
+      <tags xmi:uuid="mmuuid:b1960d19-be61-4613-a1a9-e5841aa197f1" key="connection:URL" value="https://raw.githubusercontent.com/foogaro/king/master/Totaal%202017%20Q1.csv"/>
+      <tags xmi:uuid="mmuuid:a3c6c7f0-d61f-42e4-bbaa-cd36f481d810" key="connection:JBossDsJndi" value="TOT2017Q1_REMOTE_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:4c40e7ec-930e-4769-b0e9-75b9e40032aa">
+    <diagram xmi:uuid="mmuuid:e51a8d3b-2919-47c1-9549-5cc527001b93" type="packageDiagramType" target="mmuuid/3ee5d3b8-cb3e-4f96-a312-28fce7d04257"/>
+  </diagram:DiagramContainer>
+  <relational:Procedure xmi:uuid="mmuuid:b7682c0c-2841-43fb-8beb-79a3f2c77dd7" name="invokeHttp">
+    <parameters xmi:uuid="mmuuid:b88c85cf-fed5-4fb5-be18-50ecc1df67de" name="action" length="4000" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:4e59e578-ee13-4a00-8d36-f87434caf429" name="request" nullable="NULLABLE">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#object"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:4e993d97-62a9-4b1f-96c6-38cb55bc22ca" name="endpoint" length="4000" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:cc6e7b98-e466-42e1-8ff3-0f83ae880d28" name="stream">
+      <type href="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:0dfebb56-fe38-4ccc-a542-c7fedc0c9712" name="result" direction="RETURN">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#blob"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:c23debb0-e968-4740-bfe9-e83c04c9fef3" name="contentType" direction="OUT" length="4000" nullable="NULLABLE">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <parameters xmi:uuid="mmuuid:90c995b8-ff41-4240-9b81-e7c93f55550d" name="headers" nullable="NULLABLE">
+      <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+    </parameters>
+  </relational:Procedure>
+</xmi:XMI>

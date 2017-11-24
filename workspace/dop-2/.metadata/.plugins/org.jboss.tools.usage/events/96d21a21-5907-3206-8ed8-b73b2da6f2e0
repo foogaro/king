@@ -1,0 +1,11 @@
+#Tue Nov 21 17:33:16 CET 2017
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1511281996372
+c=0
+cmp=usage
+a=finishWizard
+cl=org.teiid.designer.jdbc.ui.wizards.JdbcImportWizard
+v=2.2.4
+s=1

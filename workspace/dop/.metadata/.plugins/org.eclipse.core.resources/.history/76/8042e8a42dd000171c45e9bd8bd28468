@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:fea6b4da-4e08-47e3-811a-d90014b2f06b" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:39291a54-d2f0-49e9-8a0d-719cae4e3aae" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:fa7409b9-1e4f-4a59-b170-4e4d9e3a2c2f" name="TOT2017Q1_DS" modelLocation="../01_DataSources/TOT2017Q1_DS.xmi" uuid="mmuuid:cc20b44c-8d58-4dbc-aee3-71486209acf1" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:6d5e6c9c-f937-4fa8-aa2c-144ed414dc4b"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:162f5734-6b2a-4abf-8bc1-0c39a23f0bd5"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:ed6a270c-69b7-4723-b776-ee6e5c9021e5">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:482e30b0-6b32-454e-9ff3-6b50586ba5b5" outputs="mmuuid/49e63788-68b5-49ef-9a87-425cbefb6c06" target="mmuuid/49e63788-68b5-49ef-9a87-425cbefb6c06">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:87274ea8-0b95-49cc-8bd9-d3824e877797">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:59e0b0f8-2ee7-4c97-ae87-7799a0a36848" selectSql="SELECT &#xa;&#x9;A.GEMEENTE, A.JAAR, A.PERIODE, A.BELEIDSPROGRAMMA, A.ORGANISATIE, A.&quot;SUBSIDIE BESCHIKT&quot; AS &quot;&quot;&quot;SUBSIDIE BESCHIKT&quot;&quot;&quot;, A.&quot;BEKOSTIGD UIT RIJKSINKOMSTEN&quot; AS &quot;&quot;&quot;BEKOSTIGD UIT RIJKSINKOMSTEN&quot;&quot;&quot;, A.&quot;WETTELIJKE TAAK&quot; AS &quot;&quot;&quot;WETTELIJKE TAAK&quot;&quot;&quot;, A.&quot;GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN&quot; AS &quot;&quot;&quot;GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN&quot;&quot;&quot;&#xa;FROM&#xa;&#x9;(EXEC TOT2017Q1_DS.getTextFiles('Totaal 2017 Q1.csv')) AS f, TEXTTABLE(file COLUMNS GEMEENTE string, JAAR string, PERIODE string, BELEIDSPROGRAMMA string, ORGANISATIE string, &quot;SUBSIDIE BESCHIKT&quot; string, &quot;BEKOSTIGD UIT RIJKSINKOMSTEN&quot; string, &quot;WETTELIJKE TAAK&quot; string, &quot;GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN&quot; string  DELIMITER ';' HEADER) AS A"/>
+        <aliases xmi:uuid="mmuuid:f34fd2e5-54d3-4f7f-826d-e39c25317d91" alias="getTextFiles">
+          <aliasedObject href="../01_DataSources/TOT2017Q1_DS.xmi#mmuuid/b41cd0cc-cc3f-4953-b619-d6b136b14b00"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2de68ee5-5212-4af8-ab06-a7aca24ca993" outputs="mmuuid/0291a4d4-3052-409d-a86a-3f5f5c4d00c7"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:dbff17e4-5a7d-46c9-a848-4b8b19c308e0" outputs="mmuuid/5b2a0d8c-1d7d-4bf1-b11c-5e7d44d10b33"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d986ff99-8234-498f-b7ea-78a02e9206bb" outputs="mmuuid/673d8ae2-8b5d-4d62-9aa3-c2c29da88e44"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:cbbe7c5c-c651-4485-8c8b-2c224185d6e4" outputs="mmuuid/90939e13-cabc-4085-9ab1-9feabe4dc081"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:590ce05f-7b99-4eb1-8aaa-16b3faa47fd1" outputs="mmuuid/cf42c71c-1b2f-4898-bc81-3b460640f3bc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:08a9d577-ede4-4b30-9384-dd6201f2b5c2" outputs="mmuuid/e01cc6c1-30fe-4194-b02e-dc2f66c1296a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:34580e8a-494c-4744-8835-fa56c1e50072" outputs="mmuuid/34b75a44-c1ba-4874-ba88-ce62975f7fd6"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:1f7f5574-065a-4917-b135-34f7a6a20458" outputs="mmuuid/3256d9e2-9887-4390-aed3-f38a6efe42a0"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ef5e57b6-6716-4a04-b663-89e585ac12ce" outputs="mmuuid/3ab5cafb-8ba9-463b-ad4f-ab75720ce0ca"/>
+      <inputs href="../01_DataSources/TOT2017Q1_DS.xmi#mmuuid/b41cd0cc-cc3f-4953-b619-d6b136b14b00"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:49e63788-68b5-49ef-9a87-425cbefb6c06" name="TOT2017Q1" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:0291a4d4-3052-409d-a86a-3f5f5c4d00c7" name="GEMEENTE" nameInSource="GEMEENTE" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5b2a0d8c-1d7d-4bf1-b11c-5e7d44d10b33" name="JAAR" nameInSource="JAAR" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:673d8ae2-8b5d-4d62-9aa3-c2c29da88e44" name="PERIODE" nameInSource="PERIODE" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:90939e13-cabc-4085-9ab1-9feabe4dc081" name="BELEIDSPROGRAMMA" nameInSource="BELEIDSPROGRAMMA" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:cf42c71c-1b2f-4898-bc81-3b460640f3bc" name="ORGANISATIE" nameInSource="ORGANISATIE" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:e01cc6c1-30fe-4194-b02e-dc2f66c1296a" name="&quot;SUBSIDIE BESCHIKT&quot;" nameInSource="&quot;SUBSIDIE BESCHIKT&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:34b75a44-c1ba-4874-ba88-ce62975f7fd6" name="&quot;BEKOSTIGD UIT RIJKSINKOMSTEN&quot;" nameInSource="&quot;BEKOSTIGD UIT RIJKSINKOMSTEN&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3256d9e2-9887-4390-aed3-f38a6efe42a0" name="&quot;WETTELIJKE TAAK&quot;" nameInSource="&quot;WETTELIJKE TAAK&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3ab5cafb-8ba9-463b-ad4f-ab75720ce0ca" name="&quot;GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN&quot;" nameInSource="&quot;GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+</xmi:XMI>

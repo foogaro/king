@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.teiid.designer.webservice.ui.wizard.WsdlFileSystemImportWizard">
+		<item value="319" key="dialogY"/>
+		<item value="906" key="dialogX"/>
+		<item value="748" key="width"/>
+		<item value="753" key="dialogHeight"/>
+		<item value="748" key="dialogWidth"/>
+		<item value="753" key="height"/>
+		<section name="WebServiceModel">
+			<item value="319" key="dialogY"/>
+			<item value="906" key="dialogX"/>
+			<item value="753" key="dialogHeight"/>
+			<item value="748" key="dialogWidth"/>
+			<list key="xmlFolderList">
+			</list>
+		</section>
+	</section>
+</section>

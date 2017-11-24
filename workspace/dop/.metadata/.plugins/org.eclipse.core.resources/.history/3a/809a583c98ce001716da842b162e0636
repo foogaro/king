@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="DOP" version="1">
+	<description/>
+	<model name="WSJG_API_DS">
+		<property name="importer.importWSDL" value="false" />
+		<source connection-jndi-name="java:/WSJG_API_DS" name="WSJG_API_DS" translator-name="rest"/>
+	</model>
+	<model name="WSJG_API" type="VIRTUAL">
+		<metadata type="DDL"><![CDATA[
+			CREATE VIRTUAL PROCEDURE GetSurvey (
+				IN surveyId string NOT NULL,
+				IN format string NOT NULL
+			) RETURNS
+				TABLE (
+					response string(4000)
+			) OPTIONS(UPDATECOUNT '1')
+				AS
+			BEGIN
+SELECT 
+	A.response AS response 
+FROM (
+		EXEC WSJG_API_DS.invokeHttp(
+			request => '{"surveyId":"SV_012345678912345", "format":"csv", "includedQuestionIds": []}', 
+			stream => 'false', 
+			headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}'
+		)
+	) AS f,
+	XMLTABLE(
+		'/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()'
+
+	) AS A;
+			END;	
+		]]></metadata>
+	</model>
+	<translator name="rest" type="ws">
+		<property name="DefaultBinding" value="HTTP"/>
+		<property name="DefaultServiceMode" value="MESSAGE"/>
+	</translator>
+</vdb>

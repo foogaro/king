@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.teiid.designer.modelgenerator.wsdl.ui.wizards.soap.ImportWsdlSoapWizard">
+		<item value="700" key="width"/>
+		<item value="840" key="height"/>
+		<section name="ModelGeneratorWsdlUi">
+			<item value="319" key="dialogY"/>
+			<item value="906" key="dialogX"/>
+			<item value="840" key="dialogHeight"/>
+			<item value="700" key="dialogWidth"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:0e102311-5afd-49ff-9e06-75e532eb4657" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:bacb49e1-1aa9-4088-ad39-d2aabf5feaf8" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:3ee66fd8-7fc9-491e-b4e5-81bf7fdb7b2e" name="OpenDataCB_DS" modelLocation="../01_DataSources/OpenDataCB_DS.xmi" uuid="mmuuid:3639a7c6-020e-41da-b44b-5f43022d05be" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:33975160-d190-4a3f-8e89-fd6a7abe1baa"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:72d31890-02d0-4ac2-9592-1f5a6f068ff2"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:3f35a259-b9d6-411a-8beb-3d36d10ad3d9">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:1f2b0bbf-040e-4f27-b892-6ab517b2d8b6" outputs="mmuuid/e658d791-0196-4246-a1e1-64699c8739ea" target="mmuuid/e658d791-0196-4246-a1e1-64699c8739ea">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:1395f26b-09b6-4b94-b09c-bb794855dcef">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:f20e6b5b-b96e-4112-9ce5-3c9c2e5d9736" selectSql="BEGIN&#xa;&#x9;DECLARE STRING VARIABLES.qp = '';&#xa;&#x9;SELECT &#xa;&#x9;A.MannenEnVrouwen_1 AS MannenEnVrouwen_1&#xa;FROM&#xa;&#x9;(EXEC OpenDataCB_DS.invokeHttp(action=>'GET',endpoint=>VARIABLES.qp,stream=>'TRUE')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS MannenEnVrouwen_1 string PATH 'value/MannenEnVrouwen_1/text()') AS A;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:85e4ffe8-975b-4156-ac24-06054455fee6" alias="invokeHttp">
+          <aliasedObject href="../01_DataSources/OpenDataCB_DS.xmi#mmuuid/7b902ffb-3a47-46bc-8675-028fcf08f956"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4f2f15d3-0360-4899-919f-01cdfcf2d0ba" outputs="mmuuid/8e01dfef-0083-469e-9493-26b04243cb59"/>
+      <inputs href="../01_DataSources/OpenDataCB_DS.xmi#mmuuid/7b902ffb-3a47-46bc-8675-028fcf08f956"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:Procedure xmi:uuid="mmuuid:e658d791-0196-4246-a1e1-64699c8739ea" name="getPopulation">
+    <result xmi:uuid="mmuuid:7014c9bb-88ab-455f-af5d-f72d1b601bb6" name="Result">
+      <columns xmi:uuid="mmuuid:8e01dfef-0083-469e-9493-26b04243cb59" name="MannenEnVrouwen_1" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+</xmi:XMI>

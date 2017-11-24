@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DOP</name>
+	<comment>No Product Application, version 11.0.1.Final-v20170208-2046-B4143</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.teiid.designer.vdb.ui.vdbBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.teiid.designer.extension.ui.modelExtensionDefinitionBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.teiid.designer.core.modelBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.teiid.designer.core.modelNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>working-files/ViewModel.xmi</name>
+			<type>1</type>
+			<location>C:/Users/Jaap/workspace/dop/.metadata/.plugins/org.teiid.designer.vdb/DOP/VDB/DOP.vdb/DOP/01_DataSources/ViewModel.xmi</location>
+		</link>
+		<link>
+			<name>working-files/WSJG_API_DS.xmi</name>
+			<type>1</type>
+			<location>C:/Users/Jaap/workspace/dop/.metadata/.plugins/org.teiid.designer.vdb/DOP/VDB/DOP.vdb/DOP/01_DataSources/WSJG_API_DS.xmi</location>
+		</link>
+	</linkedResources>
+</projectDescription>

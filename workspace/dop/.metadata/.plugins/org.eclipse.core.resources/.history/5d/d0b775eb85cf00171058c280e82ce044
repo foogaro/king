@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:3639a7c6-020e-41da-b44b-5f43022d05be" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143"/>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:c1a43e98-cd91-4605-bf42-3a586c5661be">
+    <annotations xmi:uuid="mmuuid:22bd6958-3ff3-4e65-9d8f-6e0609453838" annotatedObject="mmuuid/3639a7c6-020e-41da-b44b-5f43022d05be">
+      <tags xmi:uuid="mmuuid:b4a506c6-e3aa-4941-8a55-7fa2ea4cc70c" key="connectionProfile:connectionProfileProviderId" value="org.teiid.designer.datatools.profiles.ws.WSConnectionProfile"/>
+      <tags xmi:uuid="mmuuid:bf43a8a6-b8d1-4849-b82e-6b39ea40b213" key="connection:SecurityType" value="None"/>
+      <tags xmi:uuid="mmuuid:5205640e-b360-4e2e-b76b-04493f5bd7e4" key="connectionProfile:connectionProfileName" value="OpenDataCB_DS"/>
+      <tags xmi:uuid="mmuuid:1a2eb524-1158-446a-9aaa-a7baaf541103" key="connection:EndPoint" value="https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&amp;$top=1"/>
+      <tags xmi:uuid="mmuuid:134aa5c2-bb4d-4cd5-bdcf-e60e64e47b07" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:90ffc093-b3fb-4c28-ae27-0540c492eaa7" key="connectionProfile:connectionProfileInstanceID" value="255ecfa1-cf85-11e7-badb-82f06cb71690"/>
+      <tags xmi:uuid="mmuuid:079609e7-34a1-43a1-a056-c03fce006361" key="connectionProfile:connectionProfileCategory" value="org.teiid.designer.import.category"/>
+      <tags xmi:uuid="mmuuid:ceca2b61-aaeb-468c-b57f-b8f5dd2525fa" key="translator:name" value="ws"/>
+      <tags xmi:uuid="mmuuid:7fd6b6ec-57bc-4dfa-aa8f-b0d57221c45b" key="connection:JBossDsJndi" value="OpenDataCB_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:8b936cbb-dba5-486f-878c-815f6c488924"/>
+</xmi:XMI>
