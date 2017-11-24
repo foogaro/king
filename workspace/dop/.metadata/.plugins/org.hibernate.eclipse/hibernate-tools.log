@@ -16,3 +16,15 @@
 2017-11-23 08:57:18,738 3722   [       Worker-5] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-11-23 08:57:19,175 4159   [       Worker-5] WARN  nternal.embedder.EclipseLogger  - The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
 2017-11-23 08:57:19,682 4666   [       Worker-5] WARN  nternal.embedder.EclipseLogger  - The POM for com.sun.xml.bind:jaxb-impl:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2017-11-24 09:12:32,928 445    [       Worker-7] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:12:32,944 461    [       Worker-7] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:12:38,216 5733   [       Worker-7] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:12:38,217 5734   [       Worker-7] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:12:38,596 6113   [       Worker-7] WARN  nternal.embedder.EclipseLogger  - The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+2017-11-24 09:12:39,061 6578   [       Worker-7] WARN  nternal.embedder.EclipseLogger  - The POM for com.sun.xml.bind:jaxb-impl:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2017-11-24 09:15:47,453 433    [      Worker-11] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:15:47,475 455    [      Worker-11] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:15:50,487 3467   [      Worker-11] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:15:50,488 3468   [      Worker-11] WARN  nternal.embedder.EclipseLogger  - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-11-24 09:15:50,805 3785   [      Worker-11] WARN  nternal.embedder.EclipseLogger  - The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+2017-11-24 09:15:51,266 4246   [      Worker-11] WARN  nternal.embedder.EclipseLogger  - The POM for com.sun.xml.bind:jaxb-impl:jar:2.2.11 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
