@@ -152,6 +152,13 @@
 		<item value="org.teiid.designer.feature:11.0.1.Final-v20170208-2046-B4143"/>
 		<item value="org.testng.eclipse:6.11.0.201703011520"/>
 	</list>
+	<section name="CleanDialogSettings">
+		<item value="662" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="423" key="DIALOG_HEIGHT"/>
+		<item value="3509" key="DIALOG_X_ORIGIN"/>
+		<item value="413" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1511178805297" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
