@@ -13,6 +13,6 @@ injected_dir=$1
 #source /usr/local/s2i/install-teiid-common.sh
 echo -n "injected_dir => " ${injected_dir}
 #install_deployments ${injected_dir}/DOP.vdb
-install_deployments ${injected_dir}/DOP.vdb
+install_deployments DOP.vdb
 echo -n "DOP.vdb copied"
 #configure_translators ${injected_dir}/translators.env
