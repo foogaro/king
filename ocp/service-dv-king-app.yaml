@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dv-king-app
+  namespace: king-poc
+  selfLink: /api/v1/namespaces/king-poc/services/dv-king-app
+  uid: 576a842b-d36a-11e7-892c-001dd8b71e9a
+  resourceVersion: '71356032'
+  creationTimestamp: '2017-11-27T11:58:54Z'
+  labels:
+    app: datavirt63-extensions-support-s2i
+    application: dv-king-app
+    template: datavirt63-extensions-support-s2i
+    xpaas: 1.4.0
+  annotations:
+    description: The data virtualization services.
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: http
+    - name: https
+      protocol: TCP
+      port: 8443
+      targetPort: https
+    - name: jdbc
+      protocol: TCP
+      port: 31000
+      targetPort: jdbc
+    - name: jdbcs
+      protocol: TCP
+      port: 31443
+      targetPort: jdbcs
+  selector:
+    deploymentConfig: dv-king-app
+  clusterIP: 10.0.53.103
+  type: ClusterIP
+  sessionAffinity: None
+status:
+  loadBalancer: {}

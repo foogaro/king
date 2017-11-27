@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  name: dv-king-app
+  namespace: king-poc
+  selfLink: /oapi/v1/namespaces/king-poc/buildconfigs/dv-king-app
+  uid: 576d4545-d36a-11e7-892c-001dd8b71e9a
+  resourceVersion: '71356038'
+  creationTimestamp: '2017-11-27T11:58:54Z'
+  labels:
+    app: datavirt63-extensions-support-s2i
+    application: dv-king-app
+    template: datavirt63-extensions-support-s2i
+    xpaas: 1.4.0
+spec:
+  triggers:
+    - type: GitHub
+      github:
+        secret: cl3ry5q8
+    - type: Generic
+      generic:
+        secret: npMOf8sI
+    - type: ImageChange
+      imageChange:
+        lastTriggeredImageID: >-
+          registry.access.redhat.com/jboss-datavirt-6/datavirt63-openshift@sha256:f9e822b4189f1a4457e94684b910e98983a3d29009d0a685a5793ca0aa315bdf
+    - type: ImageChange
+      imageChange:
+        from:
+          kind: ImageStreamTag
+          name: 'dv-king-app-ext:latest'
+    - type: ConfigChange
+  runPolicy: Serial
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/foogaro/king'
+      ref: master
+    images:
+      - from:
+          kind: ImageStreamTag
+          name: 'dv-king-app-ext:latest'
+        paths:
+          - sourcePath: /extensions/.
+            destinationDir: ./ocp/extensions/extras
+    contextDir: ocp
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        namespace: openshift
+        name: 'jboss-datavirt63-openshift:1.0'
+      env:
+        - name: CUSTOM_INSTALL_DIRECTORIES
+          value: extensions/*
+      forcePull: true
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'dv-king-app:latest'
+  resources: {}
+  postCommit: {}
+  nodeSelector: null
+status:
+  lastVersion: 1

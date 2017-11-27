@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: dv-king-app
+  namespace: king-poc
+  selfLink: /oapi/v1/namespaces/king-poc/routes/dv-king-app
+  uid: 57681665-d36a-11e7-892c-001dd8b71e9a
+  resourceVersion: '71356046'
+  creationTimestamp: '2017-11-27T11:58:54Z'
+  labels:
+    app: datavirt63-extensions-support-s2i
+    application: dv-king-app
+    template: datavirt63-extensions-support-s2i
+    xpaas: 1.4.0
+  annotations:
+    description: Route for application's http (REST) service.
+    openshift.io/host.generated: 'true'
+spec:
+  host: dv-king-app-king-poc.publicpaas.openshift.openline.nl
+  to:
+    kind: Service
+    name: dv-king-app
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
+status:
+  ingress:
+    - host: dv-king-app-king-poc.publicpaas.openshift.openline.nl
+      routerName: help
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2017-11-27T11:58:54Z'
+      wildcardPolicy: None
+    - host: dv-king-app-king-poc.publicpaas.openshift.openline.nl
+      routerName: router
+      conditions:
+        - type: Admitted
+          status: 'True'
+          lastTransitionTime: '2017-11-27T11:58:54Z'
+      wildcardPolicy: None
