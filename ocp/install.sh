@@ -2,6 +2,7 @@
 
 set -x
 
+source /usr/local/s2i/install-common.sh
 source /usr/local/s2i/install-teiid-common.sh
 
 injected_dir=$1
@@ -13,4 +14,5 @@ injected_dir=$1
 echo -n "injected_dir => " ${injected_dir}
 #install_deployments ${injected_dir}/DOP.vdb
 install_deployments /extensions/DOP.vdb
+echo -n "DOP.vdb copied"
 #configure_translators ${injected_dir}/translators.env
