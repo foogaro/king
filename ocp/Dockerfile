@@ -7,8 +7,8 @@ LABEL Name="JDV KING DOP Demo" Version="latest"
 COPY install.sh /extensions/
 COPY extensions/DOP.vdb /extensions/
 COPY extensions/DOP.vdb.dodeploy /extensions/
-COPY extensions/datasources.env /extensions/
-COPY extensions/jgroups.jceks /extensions/
-COPY extensions/keystore.jks /extensions/
-COPY extensions/resourceadapters.env /extensions/
+#COPY extensions/datasources.env /extensions/
+#COPY extensions/jgroups.jceks /extensions/
+#COPY extensions/keystore.jks /extensions/
+#COPY extensions/resourceadapters.env /extensions/
 #COPY install.properties /extensions/
