@@ -5,4 +5,4 @@ LABEL Name="JDV KING DOP Demo" Version="latest"
 
 #COPY modules /extensions/modules/
 COPY install.sh /extensions/
-COPY install.properties /extensions/
+#COPY install.properties /extensions/
