@@ -12,3 +12,4 @@ COPY extensions/DOP.vdb.dodeploy /extensions/
 #COPY extensions/keystore.jks /extensions/
 #COPY extensions/resourceadapters.env /extensions/
 #COPY install.properties /extensions/
+RUN /opt/eap/bin/add-user.sh -a --silent=true -u 'king' -p 'king.2017' -g 'admin,connect,odata'
