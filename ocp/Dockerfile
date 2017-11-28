@@ -1,5 +1,5 @@
-FROM scratch
-#FROM registry.access.redhat.com/jboss-datavirt-6/datavirt63-openshift
+FROM registry.access.redhat.com/jboss-datavirt-6/datavirt63-openshift
+#FROM scratch
 
 LABEL Name="JDV KING DOP Demo" Version="latest"
 
