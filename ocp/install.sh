@@ -20,3 +20,5 @@ install_deployments ${injected_dir}/DOP.vdb
 echo "Adding the OData role to the user LUIGI..."
 /opt/eap/bin/add-user.sh -a --silent=true -u "luigi" -p "luigi.2017" -g "admin,connect,odata,user"
 echo "Added the OData role to the user LUIGI"
+
+exit 0
