@@ -14,3 +14,4 @@ injected_dir=$1
 install_deployments ${injected_dir}/DOP.vdb
 #configure_translators ${injected_dir}/translators.env
 cp -a ${injected_dir}/application-roles.properties /opt/eap/standalone/configuration/
+chmod 777 /opt/eap/standalone/configuration/application-roles.properties
