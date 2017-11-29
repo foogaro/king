@@ -11,7 +11,12 @@ injected_dir=$1
 #install_modules ${injected_dir}/modules
 #configure_drivers ${injected_dir}/drivers.env
 #source /usr/local/s2i/install-teiid-common.sh
+#echo -n "injected_dir => " ${injected_dir}
 install_deployments ${injected_dir}/DOP.vdb
+#install_deployments DOP.vdb
 #configure_translators ${injected_dir}/translators.env
-cp -a ${injected_dir}/application-roles.properties /opt/eap/standalone/configuration/
-chmod 777 /opt/eap/standalone/configuration/application-roles.properties
+#echo "Adding the OData role to the King user..."
+#/opt/eap/bin/add-user.sh -a --silent=true -u "king" -p "king.2017" -g "admin,connect,odata"
+echo "Adding the OData role to the user LUIGI..."
+/opt/eap/bin/add-user.sh -a --silent=true -u "luigi" -p "luigi.2017" -g "admin,connect,odata,user"
+echo "Added the OData role to the user LUIGI"
