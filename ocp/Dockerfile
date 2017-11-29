@@ -16,4 +16,7 @@ LABEL Name="JDV KING DOP Demo" Version="latest"
 #RUN /opt/eap/bin/add-user.sh -a --silent=true -u 'king' -p 'king.2017' -g 'admin,connect,odata'
 
 COPY install.sh /extensions/
+COPY drivers.env /extensions/
+COPY datasources.env /extensions/
+COPY resourceadapters.env /extensions/
 
