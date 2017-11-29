@@ -3,7 +3,7 @@ FROM scratch
 
 LABEL Name="JDV KING DOP Demo" Version="latest"
 
-#COPY modules /extensions/modules/
+COPY modules /extensions/modules/
 COPY install.sh /extensions/
 COPY extensions/DOP.vdb /extensions/
 COPY extensions/DOP.vdb.dodeploy /extensions/
