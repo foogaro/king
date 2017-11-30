@@ -1,11 +1,11 @@
-#Fri Nov 24 09:12:31 CET 2017
+#Thu Nov 30 14:29:09 CET 2017
 vl=How many times the 'Finish' button pressed during the day
 l=Wizard class name
 ct=jbt
-d=1511511151556
+d=1512048549498
 c=0
 cmp=usage
 a=finishWizard
 cl=org.teiid.designer.roles.ui.wizard.DataRoleWizard
 v=2.2.4
-s=0
+s=19

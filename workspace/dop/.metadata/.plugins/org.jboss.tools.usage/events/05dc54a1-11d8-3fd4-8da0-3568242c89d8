@@ -1,11 +1,11 @@
-#Fri Nov 24 11:16:58 CET 2017
+#Thu Nov 30 14:57:28 CET 2017
 vl=How many times the 'Finish' button pressed during the day
 l=Wizard class name
 ct=jbt
-d=1511518618626
+d=1512050248745
 c=0
 cmp=usage
 a=finishWizard
 cl=org.teiid.designer.vdb.ui.wizards.NewVdbWizard
 v=2.2.4
-s=1
+s=3

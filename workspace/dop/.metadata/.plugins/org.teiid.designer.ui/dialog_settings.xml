@@ -8,9 +8,10 @@
 	</section>
 	<section name="org.teiid.designer.jdbc.ui.wizards.JdbcImportWizard">
 		<item value="false" key=""/>
+		<item value="false" key="schema"/>
 		<item value="true" key="Foreign Keys"/>
 		<item value="false" key="Procedures"/>
-		<item value="TO_UPPERCASE" key="&lt;Missing message for key &quot;JdbcImportOptionsPage.modelObjectNamesGroup&quot; in: org.teiid.designer.ui.i18n&gt;"/>
+		<item value="NONE" key="&lt;Missing message for key &quot;JdbcImportOptionsPage.modelObjectNamesGroup&quot; in: org.teiid.designer.ui.i18n&gt;"/>
 		<item value="false" key="Indexes"/>
 		<item value="false" key="Include Cost Statistics (will increase time for large imports)"/>
 		<item value="false" key="Approximations Allowed"/>

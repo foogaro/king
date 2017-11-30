@@ -24,16 +24,4 @@
 	<natures>
 		<nature>org.teiid.designer.core.modelNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>working-files/ViewModel.xmi</name>
-			<type>1</type>
-			<location>C:/Users/Jaap/workspace/dop/.metadata/.plugins/org.teiid.designer.vdb/DOP/VDB/DOP.vdb/DOP/01_DataSources/ViewModel.xmi</location>
-		</link>
-		<link>
-			<name>working-files/WSJG_API_DS.xmi</name>
-			<type>1</type>
-			<location>C:/Users/Jaap/workspace/dop/.metadata/.plugins/org.teiid.designer.vdb/DOP/VDB/DOP.vdb/DOP/01_DataSources/WSJG_API_DS.xmi</location>
-		</link>
-	</linkedResources>
 </projectDescription>

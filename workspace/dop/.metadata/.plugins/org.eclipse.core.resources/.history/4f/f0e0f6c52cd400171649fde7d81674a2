@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:1b23be66-625c-4173-99de-747c227872c7" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:991d6aef-d8c5-4f54-a8b2-dc7f58f92e95" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:f122ecc1-66b9-4318-ab4d-71110494a545" name="HORST_DS" modelLocation="../01_DataSources/HORST_DS.xmi" uuid="mmuuid:cec18012-b700-4b4b-9a60-c6e94f10e9f5" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <relational:BaseTable xmi:uuid="mmuuid:43de7db3-3d0d-40b2-a76c-7d65c7b04475" name="Bevolking_Horst_aan_de_Maas" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:17020fe4-cbad-4860-b90e-e8fb402dd7f1" name="Id" nativeType="int" length="10" fixedLength="true" nullable="NO_NULLS" autoIncremented="true" updateable="false" uniqueKeys="mmuuid/08a969b7-143e-49ff-893f-dd0999f3b64b">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b21d8e13-de6c-43fd-a6b5-ccf55e9c86a3" name="Jaar" nativeType="nvarchar" length="255" fixedLength="true" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b8939895-9af2-4211-9d65-bea5b3cfdbda" name="totaal" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b5cc72c0-0c90-4a8e-9881-1e2bb5170f52" name="leeftijd_0_9_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2708d24b-203e-4188-8767-e1a9b87f5f56" name="leeftijd_10_19_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5281a681-8454-4c23-b988-528c39e397d1" name="leeftijd_20_29_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6df62c32-623b-4795-bc8c-6e1873803682" name="leeftijd_30_39_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f321b0f8-308e-42cf-a397-3187ff7b6104" name="leeftijd_40_49_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3ce76335-45bd-4fbd-a143-5416506c4ade" name="leeftijd_50_59_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b70b4640-16fd-4396-9866-babcc7c0ae79" name="leeftijd_60_69_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:4761bfdb-bc6a-4895-a92a-c226389fbe57" name="leeftijd_70_79_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:12d2da84-df06-4c88-b868-eeae5f907921" name="leeftijd_80_89_jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:9c4d7be5-e0a8-4cd9-933e-a92a2d46ebc8" name="leeftijd_90__jaar" nativeType="float" length="53" fixedLength="true" updateable="false" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:08a969b7-143e-49ff-893f-dd0999f3b64b" name="PK__Bevolkin__3214EC07E72D61A9" columns="mmuuid/17020fe4-cbad-4860-b90e-e8fb402dd7f1"/>
+  </relational:BaseTable>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:ff138981-8629-4d03-b8f7-1d75562d986a">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:6240ff4f-3588-4df1-9a48-f09138d67c55" outputs="mmuuid/43de7db3-3d0d-40b2-a76c-7d65c7b04475" target="mmuuid/43de7db3-3d0d-40b2-a76c-7d65c7b04475">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:49484920-b87c-4eb9-8e91-9e1fd18ec1e8">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:4ad929c7-ba36-4276-a1aa-c5dec1cf8fc5" selectSql="SELECT * FROM HORST_DS.Bevolking_Horst_aan_de_Maas"/>
+        <aliases xmi:uuid="mmuuid:5fb3991f-da6e-4ce3-bfa4-9e3216295265" alias="Bevolking_Horst_aan_de_Maas">
+          <aliasedObject href="../01_DataSources/HORST_DS.xmi#mmuuid/205ae4c9-8a8f-49f0-8a88-a941e359f38c"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:729669fa-43ab-4344-8860-18f5582fe67b" outputs="mmuuid/17020fe4-cbad-4860-b90e-e8fb402dd7f1">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/da064402-d530-4f16-98f4-00341a652d17"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b03c764d-584e-4f96-ac90-44689d6aed13" outputs="mmuuid/b21d8e13-de6c-43fd-a6b5-ccf55e9c86a3">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/d7da1a8e-fd4d-4ae0-afba-a8a36add5429"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:ffdba95d-af0a-4b82-bbc9-c11fa8d1302c" outputs="mmuuid/b8939895-9af2-4211-9d65-bea5b3cfdbda">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/b16bafb8-ce89-4065-a838-504b2d4ed56b"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:0dd0fbaa-8c59-4cd4-85ae-f8553d26b03a" outputs="mmuuid/b5cc72c0-0c90-4a8e-9881-1e2bb5170f52">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/720b2774-6142-4e0e-9bb2-40433410e6a3"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:da81537a-b389-42b4-88ba-5c3818821309" outputs="mmuuid/2708d24b-203e-4188-8767-e1a9b87f5f56">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/48dcc439-4f38-47ed-9819-fb7ed3b30bf2"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:abf61086-8f60-433d-9b48-f2b64e361c3f" outputs="mmuuid/5281a681-8454-4c23-b988-528c39e397d1">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/daed8268-d080-4c64-ba53-293380953014"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7d1e25df-73ad-4d84-8f78-bde6c551310d" outputs="mmuuid/6df62c32-623b-4795-bc8c-6e1873803682">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/abfb8154-142e-4a25-8148-9c82a6166fdf"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d2ab4ecf-30a1-4dbf-b613-289079259671" outputs="mmuuid/f321b0f8-308e-42cf-a397-3187ff7b6104">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/3cf85100-45d0-4c18-8cda-44f3cd635407"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:fc16470e-f95d-403f-99f8-90bc644e5409" outputs="mmuuid/3ce76335-45bd-4fbd-a143-5416506c4ade">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/2422c3bf-1ce4-4300-9b01-ba22b0a438c8"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:300e7e98-9115-402c-83bf-e47bc5c4b9a2" outputs="mmuuid/b70b4640-16fd-4396-9866-babcc7c0ae79">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/c2c92279-424e-4444-ba9b-cb2bfff5d8ea"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:daa483b0-e9e5-4871-8112-7cc9df34531d" outputs="mmuuid/4761bfdb-bc6a-4895-a92a-c226389fbe57">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/2312d1e9-f6b8-4808-b745-af445686150f"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b74ef62a-7005-4070-8092-a8d59b852df6" outputs="mmuuid/12d2da84-df06-4c88-b868-eeae5f907921">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/72854090-44d5-4992-a205-d99525e9a400"/>
+      </nested>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:2732c6bf-77e2-49a0-b109-02f907790415" outputs="mmuuid/9c4d7be5-e0a8-4cd9-933e-a92a2d46ebc8">
+        <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/92a2c2a0-e604-493d-b715-9af94e73cbe1"/>
+      </nested>
+      <inputs href="../01_DataSources/HORST_DS.xmi#mmuuid/205ae4c9-8a8f-49f0-8a88-a941e359f38c"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:a6086cb2-07a2-4029-b646-42559b03e89a"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:bf25f761-21e6-4bcd-92ad-d18a0811dc2f"/>
+</xmi:XMI>

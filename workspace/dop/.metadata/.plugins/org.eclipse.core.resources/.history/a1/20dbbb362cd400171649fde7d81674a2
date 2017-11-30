@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:jdbc="http://www.metamatrix.com/metamodels/JDBC" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:cec18012-b700-4b4b-9a60-c6e94f10e9f5" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" maxSetSize="16000" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:cc55c661-1b8d-4563-9275-21f8472a6e61" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <relational:BaseTable xmi:uuid="mmuuid:205ae4c9-8a8f-49f0-8a88-a941e359f38c" name="Bevolking_Horst_aan_de_Maas" nameInSource="&quot;POC_KING&quot;.&quot;dbo&quot;.&quot;Bevolking Horst aan de Maas&quot;">
+    <columns xmi:uuid="mmuuid:da064402-d530-4f16-98f4-00341a652d17" name="Id" nameInSource="&quot;Id&quot;" nativeType="int" length="10" fixedLength="true" nullable="NO_NULLS" autoIncremented="true" uniqueKeys="mmuuid/f00e5b22-e03b-4d20-8098-9c2ba022010e">
+      <type href="http://www.w3.org/2001/XMLSchema#int"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:d7da1a8e-fd4d-4ae0-afba-a8a36add5429" name="Jaar" nameInSource="&quot;Jaar&quot;" nativeType="nvarchar" length="255" fixedLength="true">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:b16bafb8-ce89-4065-a838-504b2d4ed56b" name="totaal" nameInSource="&quot;totaal&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:720b2774-6142-4e0e-9bb2-40433410e6a3" name="leeftijd_0_9_jaar" nameInSource="&quot;leeftijd 0-9 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:48dcc439-4f38-47ed-9819-fb7ed3b30bf2" name="leeftijd_10_19_jaar" nameInSource="&quot;leeftijd 10-19 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:daed8268-d080-4c64-ba53-293380953014" name="leeftijd_20_29_jaar" nameInSource="&quot;leeftijd 20-29 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:abfb8154-142e-4a25-8148-9c82a6166fdf" name="leeftijd_30_39_jaar" nameInSource="&quot;leeftijd 30-39 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:3cf85100-45d0-4c18-8cda-44f3cd635407" name="leeftijd_40_49_jaar" nameInSource="&quot;leeftijd 40-49 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2422c3bf-1ce4-4300-9b01-ba22b0a438c8" name="leeftijd_50_59_jaar" nameInSource="&quot;leeftijd 50-59 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c2c92279-424e-4444-ba9b-cb2bfff5d8ea" name="leeftijd_60_69_jaar" nameInSource="&quot;leeftijd 60-69 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:2312d1e9-f6b8-4808-b745-af445686150f" name="leeftijd_70_79_jaar" nameInSource="&quot;leeftijd 70-79 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:72854090-44d5-4992-a205-d99525e9a400" name="leeftijd_80_89_jaar" nameInSource="&quot;leeftijd 80-89 jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:92a2c2a0-e604-493d-b715-9af94e73cbe1" name="leeftijd_90__jaar" nameInSource="&quot;leeftijd 90+ jaar&quot;" nativeType="float" length="53" fixedLength="true" radix="2">
+      <type href="http://www.w3.org/2001/XMLSchema#float"/>
+    </columns>
+    <primaryKey xmi:uuid="mmuuid:f00e5b22-e03b-4d20-8098-9c2ba022010e" name="PK__Bevolkin__3214EC07E72D61A9" nameInSource="&quot;PK__Bevolkin__3214EC07E72D61A9&quot;" columns="mmuuid/da064402-d530-4f16-98f4-00341a652d17"/>
+  </relational:BaseTable>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:0b882d18-f1b6-4ac6-bff8-a9eaf93cf87f">
+    <annotations xmi:uuid="mmuuid:31205362-c5b1-46cd-b269-30b7a683324e" annotatedObject="mmuuid/cec18012-b700-4b4b-9a60-c6e94f10e9f5">
+      <tags xmi:uuid="mmuuid:46fa8cf2-f5fe-427e-80e4-c40ae807b2bf" key="connection:driver-class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <tags xmi:uuid="mmuuid:53dc8a91-ee03-47b3-a286-38f61fac0554" key="connectionProfile:connectionProfileName" value="HORST_DS"/>
+      <tags xmi:uuid="mmuuid:965b259d-3740-49e8-a07b-0491a75b610b" key="connection:jarList" value="C:\Users\Jaap\Desktop\Luigi\king\misc\mssql-jdbc-6.2.2.jre8.jar"/>
+      <tags xmi:uuid="mmuuid:8d6e4ed6-8273-4fca-b63b-bbadd27b3712" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:667e865a-379a-458d-ae6a-079265a895eb" key="translator:name" value="sqlserver"/>
+      <tags xmi:uuid="mmuuid:b5f207a8-f726-4621-82f6-0aa835c1c6c8" key="connection:connection-url" value="jdbc:sqlserver://89.250.187.222:9988;databaseName=POC_KING;encrypt=true;trustServerCertificate=true;"/>
+      <tags xmi:uuid="mmuuid:5d64e45f-63f3-4c9a-b4d4-cd93ea702ea6" key="connectionProfile:connectionProfileInstanceID" value="f49d6f11-d42b-11e7-94d2-e84df5f8db85"/>
+      <tags xmi:uuid="mmuuid:8fe2870a-c3c8-4670-997a-502e658e8fb6" key="connection:connectionProfileInstanceID" value="org.eclipse.datatools.enablement.msft.sqlserver.connectionProfile"/>
+      <tags xmi:uuid="mmuuid:e276d46c-c94b-46e8-b29a-50654b237b85" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:57bbfcc3-d680-4b83-94f5-95e4c8a8b4ff" key="connection:user-name" value="king_login"/>
+      <tags xmi:uuid="mmuuid:ffaade4e-fee2-4be2-9631-a917a5b3afd7" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.db.category"/>
+      <tags xmi:uuid="mmuuid:6039e2b5-6cba-4acb-8c35-1dcf6efbb927" key="connection:JBossDsJndi" value="HORST_DS"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:5940e567-6f5b-4ee1-9234-24ca5dbd72b8"/>
+  <jdbc:JdbcSource xmi:uuid="mmuuid:346e26b8-485b-4cf9-a605-7b967e2fce94" name="HORST_DS" driverName="Microsoft SQL Server 2008 JDBC Driver" driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver" username="king_login" url="jdbc:sqlserver://89.250.187.222:9988;databaseName=POC_KING;encrypt=true;trustServerCertificate=true;">
+    <importSettings xmi:uuid="mmuuid:6bc7ec8f-60e2-4e72-9b13-8b84739f395d" createSchemasInModel="false" includeIndexes="false" includeApproximateIndexes="false">
+      <includedCatalogPaths>/POC_KING</includedCatalogPaths>
+      <includedSchemaPaths>/POC_KING/dbo</includedSchemaPaths>
+      <includedTableTypes>TABLE</includedTableTypes>
+    </importSettings>
+  </jdbc:JdbcSource>
+</xmi:XMI>
