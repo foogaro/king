@@ -68,7 +68,7 @@ STEP 2
 ./oc.exe create serviceaccount dv-king-app-service-account
 ./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
 ./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
-./oc.exe secrets new dv-king-app-config datasources.env resourceadapters.env
+./oc.exe secrets new dv-king-app-config extensions/datasources.env extensions/resourceadapters.env extensions/drivers.env
 ./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
 
 ./oc.exe delete secrets dv-king-app-secret
@@ -102,3 +102,6 @@ Luigi
 
 
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch oc.exe' <sha1>..HEAD
+
+
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch ocp/oc.exe'
