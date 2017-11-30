@@ -1,0 +1,4 @@
+{
+    "Name": "ENV_FILES",
+    "Value: "/etc/datavirt-environment/datasources.env,/etc/datavirt-environment/resourceadapters.env,/etc/datavirt-environment/drivers.env"
+}
