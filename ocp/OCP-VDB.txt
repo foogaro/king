@@ -71,6 +71,9 @@ STEP 2
 ./oc.exe secrets new dv-king-app-config datasources.env resourceadapters.env
 ./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
 
+./oc.exe delete secrets dv-king-app-secret
+./oc.exe delete secrets dv-king-app-config
+./oc.exe delete serviceaccount dv-king-app-service-account
 
 
 git add Dockerfile
@@ -89,3 +92,13 @@ git push
 
 
 
+Hi John you can find the timesheet as attachment.
+There will be one more coming next Friday.
+
+Thank you very much,
+Luigi
+
+
+
+
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch oc.exe' <sha1>..HEAD
