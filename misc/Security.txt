@@ -1,0 +1,22 @@
+Security
+	Create credentials on properties files;
+	filter data based on role;
+		AGE_0_9 < 5000 and hasRole('roleNO09') = true;
+	filter data based on user;
+		REF_YEAR=CAST(LEFT(user(),4) as integer)
+
+
+HORST.POPULATION_HORST.AGE_0_9 < 5000 and user() = 'userNO09'
+
+
+
+add-user.bat -a --silent=true -u "user2000" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "user2001" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "user2002" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "user2003" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "horst" -p "horst.2017" -g "odata,user"
+
+add-user.bat -a --silent=true -u "2005" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "user2005" -p "horst.2017" -g "odata,user,2005"
+add-user.bat -a --silent=true -u "2006" -p "horst.2017" -g "odata,user"
+add-user.bat -a --silent=true -u "user2006" -p "horst.2017" -g "odata,user,2006"

@@ -1,0 +1,472 @@
+Auke Mollema +31612764749
+
+PC password
+	DenBosch
+SharePoint credentials
+	lfugaro@redhat.com/@Vng0811!
+OpenShift environment:
+	https://publicpaas.openshift.openline.nl:8443
+	lfugaro@redhat.com/8viJP8rzmd
+Planio
+	lfugaro@redhat.com/LF-rh-001
+
+
+Ansible to automate and reproduce data-source configuration and deployments.
+
+My IP: 185.160.73.6
+
+OCP exposed IP
+	109.232.43.202
+
+
+DataSources:
+	CSV file -> local;
+	API -> local;
+		https://kng.qualtrics.com/API/v3/responseexports
+		Token: VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C
+	MySQL -> OCP but not working at the moment;
+		host: 37.230.101.37
+		db: gemma_export_prod
+		user: gemma_export_redhat
+		pass: GeiZooSheitheoG3raeb
+	SQL Server HORST
+		host: 89.250.187.222
+		port: 9988
+		db: POC_KING
+		user: king_login
+		pass: jWEzvXMYvTf971uDmJjX
+
+
+
+Download JBDS 10.4.0.GA
+	https://access.redhat.com/jbossnetwork/restricted/softwareDownload.html?softwareId=51411
+Update Site
+	https://devstudio.redhat.com/10.0/stable/updates/
+
+
+
+WSJG API DS
+	https://kng.qualtrics.com/API/v3/responseexports
+	Token: VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C
+	Default Response Set RS_cZ8UQYlDw5jc9rD
+
+
+	Surveys
+	curl -X POST -H 'X-API-TOKEN: yourapitokenhere' -H 'Content-Type: application/json' -d '{
+	    "surveyId": "SV_012345678912345",
+	    "format": "csv"
+	}' 'https://yourdatacenterid.qualtrics.com/API/v3/responseexports'
+	SV_4Ghb7o6NMHzAr3L
+	{
+	    "format": "csv",
+	    "surveyId": "SV_4Ghb7o6NMHzAr3L",
+	    "includedQuestionIds": []
+	}
+
+
+BEGIN
+	DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', ViewModel.GetSurvey.surveyId AS surveyId,  || '/' || ViewModel.GetSurvey.surveyIdViewModel.GetSurvey.format AS format,  || '/' || ViewModel.GetSurvey.format);
+	SELECT 
+	A.response AS response
+FROM
+	(EXEC WSJG_API_DS.invokeHttp(action=>'GET',endpoint=>VARIABLES.qp,stream=>'TRUE',headers=>'{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()') AS A;
+END
+
+
+
+
+BEGIN
+	DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', ViewModel.GetSurvey.surveyId AS surveyId, ViewModel.GetSurvey.format AS format);
+	SELECT 
+		A.response AS response
+	FROM
+		(EXEC WSJG_API_DS.invokeHttp(action => 'POST', endpoint => VARIABLES.qp, stream => 'TRUE', headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}')) AS f, 
+		XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()') AS A;
+END
+
+
+
+
+
+BEGIN
+	DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', WSJG.GetSurvey.inSurveyId AS surveyId, WSJG.GetSurvey.inFormat AS format);
+	SELECT rs.response AS result 
+	FROM (
+		call invokeHttp(action => 'POST', 
+								endpoint => VARIABLES.qp, 
+								stream => 'TRUE', 
+								headers => 'X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}')) AS ws,
+		XMLTABLE('/response' 
+							PASSING JSONTOXML('response', ws.result)
+							COLUMNS response string PATH 'text()') AS rs;
+END
+
+
+
+
+
+
+
+JDV installation
+Users\Jaap
+admin/admin.2017
+
+MySQL DS
+
+CSV file DS
+
+
+
+
+
+
+19oct2017 32888
+13nov2017 32922
+
+
+
+
+/subsystem=resource-adapters/resource-adapter=WSJG_API_RA:add(module=org.jboss.teiid.resource-adapter.webservice)
+/subsystem=resource-adapters/resource-adapter=WSJG_API_RA/connection-definitions=WSJG_API_DS:add(jndi-name=java:/WSJG_API_DS, class-name=org.teiid.resource.adapter.ws.WSManagedConnectionFactory, enabled=true, use-java-context=true)
+/subsystem=resource-adapters/resource-adapter=WSJG_API_RA/connection-definitions=WSJG_API_DS/config-properties=EndPoint:add(value=https://kng.qualtrics.com/API/v3/responseexports)
+/subsystem=resource-adapters/resource-adapter=WSJG_API_RA:activate
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="DOP" version="1">
+	<description/>
+	<model name="WSJG_API_DS">
+		<property name="importer.importWSDL" value="false" />
+		<source connection-jndi-name="java:/WSJG_API_DS" name="WSJG_API_DS" translator-name="rest"/>
+	</model>
+	<model name="WSJG_API" type="VIRTUAL">
+		<metadata type="DDL"><![CDATA[
+			CREATE VIRTUAL PROCEDURE GetSurvey (
+				IN surveyId string NOT NULL,
+				IN format string NOT NULL
+			) RETURNS
+				TABLE (
+					response string(4000)
+			) OPTIONS(UPDATECOUNT '1')
+				AS
+			BEGIN
+				DECLARE STRING VARIABLES.qp = QUERYSTRING('https://kng.qualtrics.com/API/v3/responseexports', WSJG_API.GetSurvey.surveyId AS surveyId, WSJG_API.GetSurvey.format AS format);
+				SELECT A.response AS response FROM (EXEC WSJG_API_DS.invokeHttp(action => 'POST', endpoint => VARIABLES.qp, stream => 'TRUE', headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()') AS A;
+			END;	
+		]]></metadata>
+	</model>
+	<translator name="rest" type="ws">
+		<property name="DefaultBinding" value="HTTP"/>
+		<property name="DefaultServiceMode" value="MESSAGE"/>
+	</translator>
+</vdb>
+
+
+
+
+SELECT 
+	A.response AS response 
+FROM (
+		EXEC WSJG_API_DS.invokeHttp(
+			request => '{"surveyId":"SV_012345678912345", "format":"csv", "includedQuestionIds": []}', 
+			stream => 'TRUE', 
+			headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C"}'
+		)
+	) AS f,
+	XMLTABLE(
+		'/response' PASSING JSONTOXML('response', f.result) COLUMNS response string PATH 'text()'
+
+	) AS A;
+
+
+
+
+
+
+
+MySQL
+module add --name=com.oracle.jdbc --resources=/path/to/ojdbc6.jar --dependencies=javax.api,javax.transaction.api
+/subsystem=datasources/jdbc-driver=oracle:add(driver-module-name=com.oracle.jdbc,driver-name=oracle,driver-xa-datasource-class-name=oracle.jdbc.xa.client.OracleXADataSource)
+/subsystem=datasources/data-source=OracleDS:add(jndi-name="java:jboss/datasources/oracleDS",connection-url="jdbc:oracle:thin:@oraclehost:1521:SID",driver-name=oracle,user-name=scott,password=tiger,valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleValidConnectionChecker",stale-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleStaleConnectionChecker",exception-sorter-class-name="org.jboss.jca.adapters.jdbc.extensions.oracle.OracleExceptionSorter")
+
+module add --name=com.mysql.jdbc --resources=/path/to/mysql.jar --dependencies=javax.api,javax.transaction.api
+/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysdql,driver-module-name=com.mysql.jdbc,driver-xa-datasource-class-name=com.mysql.jdbc.jdbc2.optional.MysqlXADataSource)
+/subsystem=datasources/data-source=GEMMA_DS:add(driver-name=mysql,jndi-name=java:/GEMMA_DS,use-java-context=true,jta=true,user-name=gemma_export_redhat,password="GeiZooSheitheoG3raeb",connection-url="jdbc:mysql://37.230.101.37:3306/gemma_export_prod?useSSL=false&verifyServerCertificate=false",min-pool-size=20,max-pool-size=250,flush-strategy=FailingConnectionOnly,statistics-enabled=true,pool-prefill=true,background-validation=true,valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker",exception-sorter-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter")
+/subsystem=datasources/data-source=GEMMA_DS:enable(persistent=true)
+/subsystem=datasources/data-source=GEMMA_DS:test-connection-in-pool
+/subsystem=datasources/data-source=GEMMA_DS/statistics=pool:read-resource(include-runtime=true,include-defaults=true)
+/subsystem=datasources/data-source=GEMMA_DS:remove
+
+<valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"></valid-connection-checker>
+      <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"></exception-sorter>
+    <
+
+		host: 37.230.101.37
+		db: gemma_export_prod
+		user: gemma_export_redhat
+		pass: GeiZooSheitheoG3raeb
+
+
+
+/subsystem=datasources/data-source=GEMMA_DS:test-connection-in-pool
+
+
+
+[standalone@localhost:9999 /] /subsystem=datasources/data-source=GEMMA_DS/statistics=pool:read-resource(include-runtime=true,include-defaults=true)
+{
+    "outcome" => "success",
+    "result" => {
+        "ActiveCount" => "20",
+        "AvailableCount" => "250",
+        "AverageBlockingTime" => "0",
+        "AverageCreationTime" => "114",
+        "CreatedCount" => "20",
+        "DestroyedCount" => "0",
+        "InUseCount" => "0",
+        "MaxCreationTime" => "261",
+        "MaxUsedCount" => "1",
+        "MaxWaitCount" => "0",
+        "MaxWaitTime" => "0",
+        "TimedOut" => "0",
+        "TotalBlockingTime" => "0",
+        "TotalCreationTime" => "2287",
+        "statistics-enabled" => true
+    }
+}
+
+
+
+
+[standalone@localhost:9999 /] /subsystem=datasources/data-source=GEMMA_DS:read-resource(include-runtime=true,include-defaults=true)
+{
+    "outcome" => "success",
+    "result" => {
+        "allocation-retry" => undefined,
+        "allocation-retry-wait-millis" => undefined,
+        "allow-multiple-users" => false,
+        "background-validation" => true,
+        "background-validation-millis" => undefined,
+        "blocking-timeout-wait-millis" => undefined,
+        "check-valid-connection-sql" => undefined,
+        "connectable" => false,
+        "connection-url" => "jdbc:mysql://37.230.101.37:3306/gemma_export_prod?useSSL=false&verifyServerCertificate=false",
+        "datasource-class" => undefined,
+        "driver-class" => undefined,
+        "driver-name" => "mysql",
+        "enabled" => true,
+        "exception-sorter-class-name" => "org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter",
+        "exception-sorter-properties" => undefined,
+        "flush-strategy" => "FailingConnectionOnly",
+        "idle-timeout-minutes" => undefined,
+        "jndi-name" => "java:/GEMMA_DS",
+        "jta" => true,
+        "max-pool-size" => 250,
+        "min-pool-size" => 20,
+        "new-connection-sql" => undefined,
+        "password" => "GeiZooSheitheoG3raeb",
+        "pool-prefill" => true,
+        "pool-use-strict-min" => undefined,
+        "prepared-statements-cache-size" => undefined,
+        "query-timeout" => undefined,
+        "reauth-plugin-class-name" => undefined,
+        "reauth-plugin-properties" => undefined,
+        "security-domain" => undefined,
+        "set-tx-query-timeout" => false,
+        "share-prepared-statements" => false,
+        "spy" => false,
+        "stale-connection-checker-class-name" => undefined,
+        "stale-connection-checker-properties" => undefined,
+        "statistics-enabled" => true,
+        "track-statements" => "NOWARN",
+        "transaction-isolation" => undefined,
+        "url-delimiter" => undefined,
+        "url-selector-strategy-class-name" => undefined,
+        "use-ccm" => true,
+        "use-fast-fail" => false,
+        "use-java-context" => true,
+        "use-try-lock" => undefined,
+        "user-name" => "gemma_export_redhat",
+        "valid-connection-checker-class-name" => "org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker",
+        "valid-connection-checker-properties" => undefined,
+        "validate-on-match" => false,
+        "connection-properties" => undefined,
+        "statistics" => {
+            "pool" => undefined,
+            "jdbc" => undefined
+        }
+    }
+}
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<vdb name="DOP" version="1">
+	<description/>
+	<model name="WSJG_API_DS">
+		<property name="importer.importWSDL" value="false" />
+		<source connection-jndi-name="java:/WSJG_API_DS" name="WSJG_API_DS" translator-name="rest"/>
+	</model>
+	<model name="WSJG_API" type="VIRTUAL">
+		<metadata type="DDL"><![CDATA[
+			CREATE VIRTUAL PROCEDURE GetSurvey (
+				IN surveyId string NOT NULL,
+				IN format string NOT NULL
+			) RETURNS
+				TABLE (
+					response string(4000)
+			) OPTIONS(UPDATECOUNT '1')
+				AS
+			BEGIN
+SELECT 
+	A.response AS response 
+FROM (
+		EXEC WSJG_API_DS.invokeHttp(
+			action => 'POST',
+			request => '{"surveyId":"SV_012345678912345", "format":"csv", "includedQuestionIds": []}', 
+			stream => 'false', 
+			headers => '{"X-API-TOKEN":"VMIoMaMs4sJjW3SOc9OobDAd2zxcCdIgbgQV3u5C", "content-type": "application/json"}'
+		)
+	) AS f,
+	XMLTABLE(
+		'/result' PASSING JSONTOXML('result', f.result) COLUMNS response string PATH 'text()'
+
+	) AS A;
+			END;	
+		]]></metadata>
+	</model>
+	<translator name="rest" type="ws">
+		<property name="DefaultBinding" value="HTTP"/>
+		<property name="DefaultServiceMode" value="MESSAGE"/>
+	</translator>
+</vdb>
+
+
+
+
+
+
+
+convert(TOT2017Q1.TOT2017Q1."""BEKOSTIGD UIT RIJKSINKOMSTEN""", boolean) AS GOV_INCOME
+
+CASE WHEN TOT2017Q1.TOT2017Q1."""WETTELIJKE TAAK""" = 'Ja' THEN true ELSE false END AS LEGAL_TASK
+
+
+convert(TOT2017Q1.TOT2017Q1."""WETTELIJKE TAAK""", boolean) AS LEGAL_TASK
+
+
+
+convert(
+	REPLACE(
+		',',
+		REPLACE('.', TOT2017Q1.TOT2017Q1."""SUBSIDIE BESCHIKT""", ''),
+		'.'), 
+	bigdecimal
+) AS SUBSIDY_AMOUNT
+
+
+
+php s2i
+github upload csv
+build php ref github
+
+
+
+
+
+
+C:\Users\Jaap\jdv-6.3\bin>jboss-cli.bat
+JAVA_HOME is not set. Unexpected results may occur.
+Set JAVA_HOME to the directory of your local JDK to avoid this message.
+You are disconnected at the moment. Type 'connect' to connect to the server or 'help' for the list of supported commands.
+[disconnected /] connect
+[standalone@localhost:9999 /] deployment-overlay add --name=odata2-web-xml --content=WEB-INF/web.xml=C:\\Users\\Jaap\\Desktop\\Luigi\\software\\web.xml
+[standalone@localhost:9999 /] deployment-overlay link --name=odata2-web-xml --deployments=teiid-odata.war
+[standalone@localhost:9999 /]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Application created. Continue to overview.
+A new data service has been created in your project.  The username/password for accessing the service is 0oE9K1JV/T<-,C6L@5'.  Please be sure to create the "dv-king-service-account" service account and the following secrets: "dv-kin-config" containing the datasource configuration details required by the deployed VDB(s); "dv-king-secret" containing the keystore.jks file used for serving secure content; "datavirt-app-secret" containing the jgroups.jceks file used for securing JGroups communications.
+Manage your app
+
+The web console is convenient, but if you need deeper control you may want to try our command line tools.
+Command line tools
+
+Download and install the oc command line tool. After that, you can start by logging in, switching to this particular project, and displaying an overview of it, by doing:
+
+oc login https://publicpaas.openshift.openline.nl:8443
+oc project king-poc
+oc status
+
+
+
+
+
+SELECT
+	H.Id AS ID, 
+	CAST(H.Jaar AS integer) AS REF_YEAR, 
+	CAST(H.totaal AS integer) AS TOTAL, 
+	CAST(H.leeftijd_0_9_jaar AS integer) AS AGE_0_9, 
+	CAST(H.leeftijd_10_19_jaar AS integer) AS AGE_10_19, 
+	CAST(H.leeftijd_20_29_jaar AS integer) AS AGE_20_29, 
+	CAST(H.leeftijd_30_39_jaar AS integer) AS AGE_30_39,
+	CAST(H.leeftijd_40_49_jaar AS integer) AS AGE_40_49,
+	CAST(H.leeftijd_50_59_jaar AS integer) AS AGE_50_59, 
+	CAST(H.leeftijd_60_69_jaar AS integer) AS AGE_60_69, 
+	CAST(H.leeftijd_70_79_jaar AS integer) AS AGE_70_79, 
+	CAST(H.leeftijd_80_89_jaar AS integer) AS AGE_80_89, 
+	CAST(H.leeftijd_90__jaar AS integer) AS OVER_90
+FROM
+	HORST_VBL.Bevolking_Horst_aan_de_Maas AS H
+
+
+https://www.microsoft.com/en-us/download/details.aspx?id=55539
+
+
+
+OpenShift
+
+Data is only transported when encrypted, using an adequately secured connection Daa
+	HTTPS/JDBCS
+
+In the PoC DV, every operation done on data by a natural person will be logged and monitored 
+	AUDIT
+
+Disconnection and deletion Data source 
+	JBDS how to handle removing updating datasopurces
+
+Creating roles based on CBS Data source in combination with masking
+Row filtering
+
+
+
+
+
+keytool -export -alias king -file king.der -keystore keystore.jks
+keytool -importcert -alias king -keystore cacerts -storepass changeit -file /c/Users/Jaap/Desktop/Luigi/king/ocp/king.der
+
+
+
+Here is what I do,
+First export the key :
+	keytool -importkeystore -srckeystore mycert.jks -destkeystore keystore.p12 -deststoretype PKCS12
+For apache ssl certificate file you need certificate only:
+	openssl pkcs12 -in keystore.p12 -nokeys -out my_key_store.crt
+For ssl key file you need only keys:
+	openssl pkcs12 -in keystore.p12 -nocerts -nodes -out my_store.key
+
+

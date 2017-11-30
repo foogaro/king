@@ -1,0 +1,246 @@
+AG.SWC_ID     = K.ORGANISATION_ID
+	MUNICIPALITY_NAME
+	MUNICIPALITY_PROGRESS
+L.SUPPLIER_ID = K.SUPPLIER_ID_1
+	SUPPLIER_NAME
+P.SUPPLIER_ID = K.SUPPLIER_ID_1
+	SOFTWARE_NAME
+
+
+
+SELECT
+	AG.MUNICIPALITY_NAME, AG.MUNICIPALITY_PROGRESS,
+	L.SUPPLIER_NAME,
+	P.SOFTWARE_NAME
+FROM
+	CSV_ALL_GEMEENTEN AS AG, CSV_KOPPELINGEN AS K, CSV_LEVERANCIERS AS L, CSV_PAKKETTEN AS P 
+WHERE 1=1
+	AND (CAST(AG.MUNICIPALITY_CBS AS integer) > 0)
+	AND CAST(AG.SWC_ID as string) = cast(K.ORGANISATION_ID as string)
+	AND CAST(L.SUPPLIER_ID as string) = cast(K.SUPPLIER_ID_1 as string)
+	AND CAST(P.SUPPLIER_ID as string) = cast(K.SUPPLIER_ID_1 as string)
+
+GROUP BY
+	AG.MUNICIPALITY_NAME, AG.MUNICIPALITY_NAME,
+	L.SUPPLIER_NAME,
+	P.SOFTWARE_NAME
+
+
+
+
+
+
+SELECT
+	AG.MUNICIPALITY_NAME AS MUNICIPALITY_NAME, 
+	AG.MUNICIPALITY_PROGRESS AS MUNICIPALITY_PROGRESS,
+	L.SUPPLIER_NAME AS SUPPLIER_NAME,
+	P.SOFTWARE_NAME AS SOFTWARE_NAME
+FROM
+	GEMMA_VBL.CSV_ALL_GEMEENTEN AG, 
+	GEMMA_VBL.CSV_KOPPELINGEN K,
+	GEMMA_VBL.CSV_LEVERANCIERS L,
+	GEMMA_VBL.CSV_PAKKETTEN P 
+WHERE 1=1
+	AND (CAST(AG.MUNICIPALITY_CBS AS integer) > 0)
+	AND AG.SWC_ID = K.ORGANISATION_ID
+	AND L.SUPPLIER_ID = K.SUPPLIER_ID_1
+	AND P.SUPPLIER_ID = K.SUPPLIER_ID_1
+
+
+
+
+
+
+
+SELECT
+	AG.MUNICIPALITY_NAME, AG.MUNICIPALITY_PROGRESS,
+	L.SUPPLIER_NAME,
+	P.SOFTWARE_NAME
+FROM
+	CSV_ALL_GEMEENTEN AS AG, CSV_KOPPELINGEN AS K, CSV_LEVERANCIERS AS L, CSV_PAKKETTEN AS P 
+WHERE 1=1
+	AND CAST(AG.SWC_ID as string) = cast(K.ORGANISATION_ID as string)
+	AND CAST(L.SUPPLIER_ID as string) = cast(K.SUPPLIER_ID_1 as string)
+	AND CAST(P.SUPPLIER_ID as string) = cast(K.SUPPLIER_ID_1 as string)
+
+
+
+
+
+SELECT
+MUNICIPALITY_NAME, MUNICIPALITY_PROGRESS
+FROM
+CSV_ALL_GEMEENTEN
+
+
+
+
+
+
+
+case when KING.PROGRESS.NUM_SOFTWARE_PACKAGES > 100 then '*****' else  KING.PROGRESS.NUM_SOFTWARE_PACKAGES end
+
+
+
+IMPORT GEMMA
+CREATE GEMMA's VBL 
+CREATE KING SCHEMA
+	CREATE PROGRESS VIEW BASESD on SQL code
+	CREATE DATA ROLES for PROGRESS
+
+
+
+SELECT
+		COUNT(*) AS NUM_SOFTWARE_PACKAGES, NSP.MUNICIPALITY_NAME, NSP.SUPPLIER_NAME
+	FROM
+		(SELECT CAST(AG.MUNICIPALITY_NAME AS STRING) AS MUNICIPALITY_NAME, CAST(AG.MUNICIPALITY_PROGRESS AS string) AS MUNICIPALITY_PROGRESS, cast(L.SUPPLIER_NAME AS string) AS SUPPLIER_NAME, cast(P.SOFTWARE_NAME AS string) AS SOFTWARE_NAME FROM GEMMA_VBL.CSV_ALL_GEMEENTEN AS AG, GEMMA_VBL.CSV_KOPPELINGEN AS K, GEMMA_VBL.CSV_LEVERANCIERS AS L, GEMMA_VBL.CSV_PAKKETTEN AS P WHERE (CAST(AG.SWC_ID AS string) = cast(K.ORGANISATION_ID AS string)) AND (CAST(L.SUPPLIER_ID AS string) = cast(K.SUPPLIER_ID_1 AS string)) AND (CAST(P.SUPPLIER_ID AS string) = cast(K.SUPPLIER_ID_1 AS string))) AS NSP
+	GROUP BY NSP.MUNICIPALITY_NAME, NSP.SUPPLIER_NAME
+	ORDER BY NUM_SOFTWARE_PACKAGES DESC
+
+CASE WHEN KING.PROGRESS.NUM_SOFTWARE_PACKAGES > 100 THEN '*****' ELSE KING.STATS_SUPP_MUNI.MUNICIPALITY_NAME END
+
+
+TypedDataSet.TotaalBevolking_4
+
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$top=9999&$filter=startswith(RegioS,%27GM0796%27)%20and%20startswith(Perioden,%20%272017%27)
+
+get total number of people in that municipality, which is rapresented by the field MannenEnVrouwen_1
+
+
+csv_all_gemeenten.municipality_cbs
+	prefix the value with GM
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$top=9999&$filter=startswith(RegioS,%27GM0796%27)%20and%20startswith(Perioden,%20%272016%27)
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet/$count
+3491250
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$filter=startswith(RegioS,%27GM0003%27)%20and%20startswith(Perioden,%20%272016%27)&$top=1
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,%20%272016%27)%20and%20startswith(RegioS,%27GM0003%27)
+
+
+http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part2-url-conventions.html
+
+
+
+BEGIN
+	DECLARE STRING VARIABLES.restURL = "https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,'" || OpenDataCB.getPopulation.inPerioden || "') and startswith(RegioS,'" || OpenDataCB.getPopulation.inPrefix || OpenDataCB.getPopulation.inRegioS || "')";
+	SELECT A.MannenEnVrouwen_1 AS MannenEnVrouwen_1 FROM (EXEC OpenDataCB_DS.invokeHttp(action => 'GET', endpoint => VARIABLES.restURL, stream => 'TRUE')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS MannenEnVrouwen_1 string PATH 'value/MannenEnVrouwen_1/text()') AS A;
+END
+
+
+
+BEGIN
+	DECLARE STRING VARIABLES.restURL = 'https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,' || OpenDataCB.getPopulation.inPerioden || ') and startswith(RegioS,' || OpenDataCB.getPopulation.inPrefix || OpenDataCB.getPopulation.inRegioS || ')';
+	SELECT A.MannenEnVrouwen_1 AS MannenEnVrouwen_1 FROM (EXEC OpenDataCB_DS.invokeHttp(action => 'GET', endpoint => VARIABLES.restURL, stream => 'TRUE')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS MannenEnVrouwen_1 string PATH 'value/MannenEnVrouwen_1/text()') AS A;
+END
+
+
+SELECT
+		OD.MannenEnVrouwen_1 AS PN
+	FROM
+		(EXEC OpenDataCB.getPopulation(2016, 'GM', '0796')) AS OD
+
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,2016) and startswith(RegioS,GM0796)
+
+
+An error occurred while performing the operation:
+TEIID30504 Remote org.teiid.core.TeiidProcessingException: TEIID30504 OpenDataCB_DS: java.net.URISyntaxException: Illegal character in query at index 129:
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,2016) and startswith(RegioS,GM0796)
+
+An error occurred while performing the operation:
+TEIID30504 Remote org.teiid.core.TeiidProcessingException: TEIID30504 OpenDataCB_DS: java.net.URISyntaxException: Illegal character in query at index 135:
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,%272016%27) and startswith(RegioS,%27GM0796%27)
+
+An error occurred while performing the operation:
+TEIID30504 Remote org.teiid.core.TeiidProcessingException: TEIID30504 OpenDataCB_DS: java.net.URISyntaxException: Illegal character in query at index 131:
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,'2016') and startswith(RegioS,'GM0796')
+
+BEGIN
+	DECLARE STRING VARIABLES.restURL = QUERYSTRING('https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1');
+	SELECT A.MannenEnVrouwen_1 AS MannenEnVrouwen_1 FROM (EXEC OpenDataCB_DS.invokeHttp(action => 'GET', endpoint => VARIABLES.restURL, stream => 'TRUE')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS MannenEnVrouwen_1 string PATH 'value/MannenEnVrouwen_1/text()') AS A;
+END
+
+
+
+BEGIN
+	DECLARE STRING VARIABLES.restURL = QUERYSTRING(((((('https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith(Perioden,''' || OpenDataCB.getPopulation.inPerioden) || ''')%20and%20startswith(RegioS,''') || OpenDataCB.getPopulation.inPrefix) || OpenDataCB.getPopulation.inRegioS) || ''')'));
+	SELECT A.MannenEnVrouwen_1 AS MannenEnVrouwen_1 FROM (EXEC OpenDataCB_DS.invokeHttp(action => 'GET', endpoint => VARIABLES.restURL, stream => 'TRUE')) AS f, XMLTABLE('/response' PASSING JSONTOXML('response', f.result) COLUMNS MannenEnVrouwen_1 string PATH 'value/MannenEnVrouwen_1/text()') AS A;
+END
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith%28Perioden,'2016'%29 and startswith%28RegioS,'GM0796'%29
+
+
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith%28Perioden,%272016%27%29 and startswith%28RegioS,%27GM0796%27%29
+
+An error occurred while performing the operation:
+TEIID30504 Remote org.teiid.core.TeiidProcessingException: TEIID30504 OpenDataCB_DS: java.net.URISyntaxException: Illegal character in query at index 139:
+https://opendata.cbs.nl/ODataApi/odata/03759ned/UntypedDataSet?$select=MannenEnVrouwen_1&$top=1&$filter=startswith%28Perioden,%272016%27%29%20and%20startswith%28RegioS,%27GM0796%27%29
+
+
+SELECT
+		CAG.municipality_name AS NAME, CAG.municipality_cbs AS CBS, OD.MannenEnVrouwen_1 AS PN
+	FROM
+		(EXEC OpenDataCB.getPopulation(2016, 'GM', CAG.municipality_cbs)) AS OD, GEMMA.csv_all_gemeenten AS CAG
+
+
+SELECT
+		CAG.MUNICIPALITY_NAME AS NAME, CAG.MUNICIPALITY_CBS AS CBS
+FROM
+		GEMMA.CSV_ALL_GEMEENTEN AS CAG
+
+
+(EXEC OpenDataCB.getPopulation(2016, 'GM', CAG.MUNICIPALITY_CBS)) AS OD inner join 
+
+
+SELECT
+		CAG.MUNICIPALITY_NAME AS NAME, CAG.MUNICIPALITY_CBS AS CBS, OD.MannenEnVrouwen_1 AS PN
+	FROM
+		(EXEC OpenDataCB.getPopulation(2016, 'GM', CAG.MUNICIPALITY_CBS)) AS OD, GEMMA.CSV_ALL_GEMEENTEN AS CAG
+
+
+
+CREATE LOCAL TEMPORARY TABLE TEMP (a integer, b integer, c integer); 
+SELECT * INTO temp FROM Src1; SELECT * INTO temp FROM Src2; 
+INSERT INTO temp VALUES (1,2,3); 
+SELECT a,b,c FROM Src3, temp WHERE Src3.a = temp.b; 
+
+CREATE VIRTUAL PROCEDURE
+BEGIN
+	DECLARE integer population;
+	CREATE LOCAL TEMPORARY TABLE TEMP_CBS_POP (name string, cbs string, population integer); 
+	INSERT INTO temp VALUES (1,2,3); 
+	SELECT a,b,c FROM Src3, temp WHERE Src3.a = temp.b;
+	LOOP ON (SELECT NAME, CBS FROM STAGING.CBS) AS cbsCursor
+	BEGIN
+		population = (SELECT OD.MannenEnVrouwen_1 FROM (EXEC OpenDataCB.getPopulation(2016, 'GM', cbsCursor.CBS)) AS OD);
+		INSERT INTO TEMP_CBS_POP VALUES (cbsCursor.NAME, cbsCursor.CBS, population); 
+	END
+	SELECT * FROM TEMP_CBS_POP;
+END
+
+
+
+
+
+SELECT
+		PP.name, PP.cbs, PP.population AS POP
+	FROM
+		(EXEC STAGING.getPop()) AS PP
+
+
+BEGIN
+	DECLARE integer VARIABLES.population;
+	CREATE LOCAL TEMPORARY TABLE TEMP_CBS_POP (name string, cbs string, population integer);
+	LOOP ON (SELECT STAGING.CBS.NAME, STAGING.CBS.CBS FROM STAGING.CBS) AS cbsCursor
+	BEGIN
+		VARIABLES.population = CAST((SELECT OD.MannenEnVrouwen_1 FROM (EXEC OpenDataCB.getPopulation(2016, 'GM', cbsCursor.CBS)) AS OD) AS integer);
+		INSERT INTO TEMP_CBS_POP (TEMP_CBS_POP.name, TEMP_CBS_POP.cbs, TEMP_CBS_POP.population) VALUES (cbsCursor.NAME, cbsCursor.CBS, VARIABLES.population);
+	END
+	SELECT * FROM TEMP_CBS_POP;
+END
+
+
+  

@@ -1,0 +1,91 @@
+CONFIGURATION_NAME=dv-king-app-config
+SERVICE_ACCOUNT_NAME=dv-king-app-service-account
+
+
+./oc login --token=CDkCC8iOUh-7J556EgaKvlkAMImginn54TVhY3jjkJM --server=https://publicpaas.openshift.openline.nl:8443
+
+keytool -genkeypair -alias king -storetype JKS -keystore keystore.jks -storepass "king.2017" --dname "CN=lfugaro,OU=Consulting,O=redhat.com,L=Raleigh,S=NC,C=US"
+Enter key password for <king>
+        (RETURN if same as keystore password):
+
+keytool -genseckey -alias king -storetype JCEKS -keystore jgroups.jceks -storepass "king.2017" --dname "CN=lfugaro,OU=Consulting,O=redhat.com,L=Raleigh,S=NC,C=US"
+Enter key password for <king>
+        (RETURN if same as keystore password):
+
+./oc.exe new-project dv-king
+./oc.exe new-app --name=dv-king-app --template=datavirt63-extensions-support-s2i
+./oc.exe create serviceaccount dv-king-app-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
+./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
+./oc.exe secrets new dv-king-app-config env.properties datasources.env resourceadapters.env
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+
+
+./oc.exe delete imagestream dv-king-app
+./oc.exe delete imagestream dv-king-app-ext
+./oc.exe delete service dv-king-app
+./oc.exe delete route dv-king-app
+./oc.exe delete route jdbc-dv-king-app
+./oc.exe delete route secure-dv-king-app
+./oc.exe delete dc/dv-king-app
+./oc.exe delete dc/dv-king-app-ext
+./oc.exe delete bc/dv-king-app
+./oc.exe delete bc/dv-king-app-ext
+./oc.exe delete secrets dv-king-app-secret
+./oc.exe delete secrets dv-king-app-config
+./oc.exe delete serviceaccount dv-king-app-service-account
+
+
+./oc.exe create serviceaccount dv-king-app-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
+./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
+./oc.exe secrets new dv-king-app-config datasources.env resourceadapters.env
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+
+STEP 1 
+Completed. Go to overview.
+A new data service has been created in your project.  The username/password for accessing the service is king/king.2017.  Please be sure to create the "dv-king-app-service-account" service account and the following secrets: "dv-king-app-config" containing the datasource configuration details required by the deployed VDB(s); "dv-king-app-secret" containing the keystore.jks file used for serving secure content; "dv-king-app-secret" containing the jgroups.jceks file used for securing JGroups communications.
+Manage your app
+
+The web console is convenient, but if you need deeper control you may want to try our command line tools.
+Command line tools
+
+Download and install the oc command line tool. After that, you can start by logging in, switching to this particular project, and displaying an overview of it, by doing:
+
+oc login https://publicpaas.openshift.openline.nl:8443
+oc project king-poc
+oc status	
+
+For more information about the command line tools, check the CLI Reference and Basic CLI Operations.
+
+
+STEP 2
+./oc.exe env dc/dv-king-app CUSTOM_INSTALL_DIRECTORIES=extensions
+./oc.exe env dc/dv-king-app VDB_DIRS=vdbs
+./oc.exe env dc/dv-king-app CONFIGURATION_NAME=dv-king-app-config
+./oc.exe env dc/dv-king-app SERVICE_ACCOUNT_NAME=dv-king-app-service-account
+./oc.exe env bc/dv-king-app ENV_FILES=extensions/datasources.env,extensions/resourceadapters.env,extensions/drivers.env
+./oc.exe create serviceaccount dv-king-app-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
+./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
+./oc.exe secrets new dv-king-app-config datasources.env resourceadapters.env
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+
+
+
+git add Dockerfile
+git add datasources.env
+git add drivers.env
+git add install.sh
+git add resourceadapters.env
+git commit -m "n1"
+git push
+
+
+
+./oc.exe env bc/dv-king-app ENV_FILES=extensions/datasources.env,extensions/resourceadapters.env,extensions/drivers.env
+./oc.exe env bc/dv-king-app CUSTOM_INSTALL_DIRECTORIES=extensions
+
+
+
+

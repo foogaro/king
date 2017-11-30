@@ -1,0 +1,219 @@
+Completed. Go to overview.
+A new data service has been created in your project.  The username/password for accessing the service is teiidUser/admin.2017.  Please be sure to create the "datavirt-service-account" service account and the following secrets: "datavirt-app-config" containing the datasource configuration details required by the deployed VDB(s); "datavirt-app-secret" containing the keystore.jks file used for serving secure content; "datavirt-app-secret" containing the jgroups.jceks file used for securing JGroups communications.
+Manage your app
+
+The web console is convenient, but if you need deeper control you may want to try our command line tools.
+Command line tools
+
+Download and install the oc command line tool. After that, you can start by logging in, switching to this particular project, and displaying an overview of it, by doing:
+
+oc login https://publicpaas.openshift.openline.nl:8443
+oc project king-poc
+oc status
+
+For more information about the command line tools, check the CLI Reference and Basic CLI Operations.
+Applied Parameter Values
+
+These parameters often include things like passwords. If you will need to reference these values later, copy them to a safe location. Parameters HOSTNAME_HTTP, HOSTNAME_HTTPS, HOSTNAME_JDBC, EXTENSIONS_DOCKERFILE, HTTPS_KEYSTORE_TYPE, MODESHAPE_USERNAME, MODESHAPE_PASSWORD, GITHUB_WEBHOOK_SECRET, GENERIC_WEBHOOK_SECRET, JGROUPS_CLUSTER_PASSWORD were generated automatically.
+
+
+
+
+
+Your API token is
+CDkCC8iOUh-7J556EgaKvlkAMImginn54TVhY3jjkJM
+Log in with this token
+	oc login --token=CDkCC8iOUh-7J556EgaKvlkAMImginn54TVhY3jjkJM --server=https://publicpaas.openshift.openline.nl:8443
+Use this token directly against the API
+	curl -H "Authorization: Bearer CDkCC8iOUh-7J556EgaKvlkAMImginn54TVhY3jjkJM" "https://publicpaas.openshift.openline.nl:8443/oapi/v1/users/~"
+
+
+oc login https://publicpaas.openshift.openline.nl:8443
+oc project king-poc
+oc status
+
+
+STEPS
+
+./oc login --token=CDkCC8iOUh-7J556EgaKvlkAMImginn54TVhY3jjkJM --server=https://publicpaas.openshift.openline.nl:8443
+
+keytool -genkeypair -alias king -storetype JKS -keystore keystore.jks -storepass "king.2017" --dname "CN=lfugaro,OU=Consulting,O=redhat.com,L=Raleigh,S=NC,C=US"
+Enter key password for <king>
+        (RETURN if same as keystore password):
+
+keytool -genseckey -alias king -storetype JCEKS -keystore jgroups.jceks -storepass "king.2017" --dname "CN=lfugaro,OU=Consulting,O=redhat.com,L=Raleigh,S=NC,C=US"
+Enter key password for <king>
+        (RETURN if same as keystore password):
+
+./oc.exe new-project dv-king
+./oc.exe new-app --name=dv-king-app --template=datavirt63-extensions-support-s2i
+./oc.exe create serviceaccount dv-king-app-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
+./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
+./oc.exe secrets new dv-king-app-config env.properties datasources.env resourceadapters.env
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+
+
+./oc.exe delete imagestream dv-king-app
+./oc.exe delete imagestream dv-king-app-ext
+./oc.exe delete service dv-king-app
+./oc.exe delete route dv-king-app
+./oc.exe delete route jdbc-dv-king-app
+./oc.exe delete route secure-dv-king-app
+./oc.exe delete bc/dv-king-app
+./oc.exe delete bc/dv-king-app-ext
+./oc.exe delete secrets dv-king-app-secret
+./oc.exe delete secrets dv-king-app-config
+./oc.exe delete serviceaccount dv-king-app-service-account
+./oc.exe delete dc/dv-king-app-ext
+./oc.exe delete dc/dv-king-app
+
+
+Application created. Continue to overview.
+A new data service has been created in your project.  The username/password for accessing the service is king/king.2017.  Please be sure to create the "datavirt-service-account" service account and the following secrets: "dv-king-app-config" containing the datasource configuration details required by the deployed VDB(s); "dv-king-app-secret" containing the keystore.jks file used for serving secure content; "dv-king-app-secret" containing the jgroups.jceks file used for securing JGroups communications.
+Manage your app
+
+The web console is convenient, but if you need deeper control you may want to try our command line tools.
+Command line tools
+
+Download and install the oc command line tool. After that, you can start by logging in, switching to this particular project, and displaying an overview of it, by doing:
+
+oc login https://publicpaas.openshift.openline.nl:8443
+oc project king-poc
+oc status
+
+
+
+VDB_DIRS
+
+
+
+kinggemeenten
+
+
+
+
+Cloning "https://github.com/foogaro/king" ...
+	Commit:	25000aab0e2b1e5ccfd383e18fb4850e3826fd65 (Removed a COPY)
+	Author:	Luigi Fugaro <l.fugaro@gmail.com>
+	Date:	Mon Nov 27 16:16:07 2017 +0100
+Pulling image "10.0.209.148:5000/king-poc/dv-king-app-ext@sha256:0ad136e46f9f9bcf4ccda5752cdad045c32a5264e8244525d648742c243129c8" ...
+Pulling image "registry.access.redhat.com/jboss-datavirt-6/datavirt63-openshift@sha256:f9e822b4189f1a4457e94684b910e98983a3d29009d0a685a5793ca0aa315bdf" ...
+Pulling image "registry.access.redhat.com/jboss-datavirt-6/datavirt63-openshift@sha256:f9e822b4189f1a4457e94684b910e98983a3d29009d0a685a5793ca0aa315bdf" ...
+Copying all war artifacts from /home/jboss/source/. directory into /opt/eap/standalone/deployments for later deployment...
+Copying all ear artifacts from /home/jboss/source/. directory into /opt/eap/standalone/deployments for later deployment...
+Copying all rar artifacts from /home/jboss/source/. directory into /opt/eap/standalone/deployments for later deployment...
+Copying all jar artifacts from /home/jboss/source/. directory into /opt/eap/standalone/deployments for later deployment...
+Copying all war artifacts from /home/jboss/source/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all ear artifacts from /home/jboss/source/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all rar artifacts from /home/jboss/source/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all jar artifacts from /home/jboss/source/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all war artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all ear artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all rar artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all jar artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all war artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb.dodeploy/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all ear artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb.dodeploy/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all rar artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb.dodeploy/deployments directory into /opt/eap/standalone/deployments for later deployment...
+Copying all jar artifacts from /home/jboss/source//home/jboss/source/extensions/DOP.vdb.dodeploy/deployments directory into /opt/eap/standalone/deployments for later deployment...
+cp: cannot stat '/home/jboss/source/extensions/extras/DOP.vdb/*': No such file or directory
+cp: cannot stat '/home/jboss/source/*-vdb.xml': No such file or directory
+cp: cannot stat '/home/jboss/source/*-vdb.xml.dodeploy': No such file or directory
+cp: cannot stat '/home/jboss/source/deployments/*-vdb.xml': No such file or directory
+cp: cannot stat '/home/jboss/source/deployments/*-vdb.xml.dodeploy': No such file or directory
+cp: cannot stat '/home/jboss/source/deployments/*.vdb': No such file or directory
+cp: cannot stat '/home/jboss/source/deployments/*.vdb.dodeploy': No such file or directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb/deployments/*-vdb.xml': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb/deployments/*-vdb.xml.dodeploy': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb/deployments/*.vdb': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb/deployments/*.vdb.dodeploy': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb.dodeploy/deployments/*-vdb.xml': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb.dodeploy/deployments/*-vdb.xml.dodeploy': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb.dodeploy/deployments/*.vdb': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/DOP.vdb.dodeploy/deployments/*.vdb.dodeploy': Not a directory
+cp: cannot stat '/home/jboss/source/extensions/extras/deployments/*-vdb.xml': No such file or directory
+cp: cannot stat '/home/jboss/source/extensions/extras/deployments/*-vdb.xml.dodeploy': No such file or directory
+cp: cannot stat '/home/jboss/source/extensions/extras/deployments/*.vdb': No such file or directory
+cp: cannot stat '/home/jboss/source/extensions/extras/deployments/*.vdb.dodeploy': No such file or directory
+Pushing image 10.0.209.148:5000/king-poc/dv-king-app:latest ...
+Pushed 0/8 layers, 2% complete
+Pushed 1/8 layers, 13% complete
+Pushed 2/8 layers, 33% complete
+Pushed 3/8 layers, 50% complete
+Pushed 4/8 layers, 86% complete
+Pushed 5/8 layers, 91% complete
+Pushed 6/8 layers, 95% complete
+Pushed 7/8 layers, 96% complete
+Pushed 8/8 layers, 100% complete
+Push successful
+
+
+
+
+
+
+There is a problem with your service configuration!
+You provided following database mapping (via DB_SERVICE_PREFIX_MAPPING environment variable): . To configure datasources we expect SOFTWARE_CATALOG_DS
+_SERVICE_HOST and SOFTWARE_CATALOG_DS
+_SERVICE_PORT to be set.
+Current values:
+SOFTWARE_CATALOG_DS
+_SERVICE_HOST: 
+SOFTWARE_CATALOG_DS
+_SERVICE_PORT: 
+Please make sure you provided correct service name and prefix in the mapping. Additionally please check that you do not set portalIP to None in the SOFTWARE_CATALOG_DS
+ service. Headless services are not supported at this time.
+WARNING! The external datasource for SOFTWARE_CATALOG_DS
+ service WILL NOT be configured.
+Warning - TOT2017Q1_RA
+_ID is missing from resource adapter configuration, defaulting to TOT2017Q1_RA
+Warning - TOT2017Q1_RA
+_MODULE_SLOT is missing from resource adapter configuration, defaulting to main
+Warning - TOT2017Q1_RA
+_MODULE_ID is missing from resource adapter configuration. Resource adapter will not be configured
+Running jboss-datavirt-6/datavirt63-openshift image, version 1.0-29
+
+
+
+08:29:13,381 WARN  [org.jgroups.protocols.openshift.KUBE_PING] (Timer-4,shared=tcp) Problem getting Pod json from Kubernetes Client[masterUrl=https://10.0.0.1:443/api/v1, headers={Authorization=#MASKED:935#}, connectTimeout=5000, readTimeout=30000, operationAttempts=3, operationSleep=1000, streamProvider=org.openshift.ping.common.stream.InsecureStreamProvider@22f93245] for cluster [hornetq-channel], namespace [king-poc], labels [application=dv-king-app]; encountered [java.lang.Exception: 3 attempt(s) with a 1000ms sleep to execute [OpenStream] failed. Last failure was [java.io.IOException: Server returned HTTP response code: 403 for URL: https://10.0.0.1:443/api/v1/namespaces/king-poc/pods?labelSelector=application%3Ddv-king-app]]
+
+add privilege
+
+
+
+
+
+DATASOURCES=SOFTWARE_CATALOG_DS
+
+
+
+
+./oc.exe delete secrets dv-king-app-secret
+./oc.exe delete secrets dv-king-app-config
+./oc.exe delete serviceaccount dv-king-app-service-account
+./oc.exe create serviceaccount dv-king-app-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
+./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
+./oc.exe secrets new dv-king-app-config env.properties datasources.env resourceadapters.env
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+
+https://access.redhat.com/documentation/en-us/red_hat_jboss_data_grid/7.1/html/data_grid_for_openshift/reference#jdg-datasource-environment-variables-list
+
+
+
+
+
+SELECT
+		TR.GEMEENTE AS MUNICIPALITY, convert(TR.JAAR, integer) AS "YEAR", TR.PERIODE AS QUARTER, TR.BELEIDSPROGRAMMA AS PROGRAM, TR.ORGANISATIE AS ORGANISATION, convert(REPLACE(REPLACE(TR."""SUBSIDIE BESCHIKT""", '.', ''), ',', '.'), bigdecimal) AS SUBSIDY_AMOUNT, CASE WHEN TR."""BEKOSTIGD UIT RIJKSINKOMSTEN""" = 'Ja' THEN TRUE ELSE FALSE END AS GOV_INCOME, CASE WHEN TR."""WETTELIJKE TAAK""" = 'Ja' THEN TRUE ELSE FALSE END AS LEGAL_TASK, TR."""GLOBAAL OVERZICHT GESUBSIDIEERDE ACTIVITEITEN""" AS DESCRIPTION
+	FROM
+		TOT2017Q1.TOT2017Q1_REMOTE AS TR       
+
+
+
+		jdbc:sqlserver://<server>:<port1433>;DatabaseName=<database>
+
+
+EAP_HOME/bin/add-user.sh -a --silent=true -u 'appuser1' -p 'password1!' -g 'guest'
+EAP_HOME/bin/add-user.sh    --silent=true -u 'admuser1' -p 'password1!' -g 'admin'
+
+
