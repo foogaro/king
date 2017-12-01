@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:a9af8e7f-a42b-4ae4-be49-4c445714d02e" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="11.0.1.Final-v20170208-2046-B4143">
+    <modelImports xmi:uuid="mmuuid:faf0816b-017b-4aab-a464-2cc1fc555cd8" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:a519433f-2065-42e8-bac2-2429251d7834" name="ZAANSTAD_DS" modelLocation="../01_DataSources/ZAANSTAD_DS.xmi" uuid="mmuuid:b008ed90-317f-4542-85fe-5d33af08f243" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:5c272f31-63f8-444e-a4c8-cab4e3f43636"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:2c379f59-97dd-4a72-8dc6-22dab55f2723"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:da1167aa-428a-46ef-b6a6-883b9150485e">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:d011734a-bd18-44c0-8eb6-df568e872016" outputs="mmuuid/38853834-4cf3-4224-afc4-158d9d802c39" target="mmuuid/38853834-4cf3-4224-afc4-158d9d802c39">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:df509e27-a80d-4e79-b394-26a3888a8639">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:3756e6e3-a28f-4e76-96b9-e57e9951ac74" selectSql="SELECT &#xa;&#x9;A.woonplaats, A.wijk, A.buurt, A.aantal_verblijfsobjecten, A.gem_aantal_personen, A.gem_00_tm_12_jr, A.gem_13_tm_17_jr, A.gem_18_tm_23_jr, A.gem_24_tm_40_jr, A.gem_41_tm_65_jr, A.gem_66_tm_80_jr, A.&quot;gem_80+_jr&quot; AS &quot;&quot;&quot;gem_80+_jr&quot;&quot;&quot;&#xa;FROM&#xa;&#x9;(EXEC ZAANSTAD_DS.invokeHttp('GET', null, 'https://ckan.dataplatform.nl/dataset/4a871207-c5cc-4cbd-ac70-b4f816c23747/resource/b190d9cb-1f6b-4061-b905-3af974eb9fdc/download/adreskenmerken-verblijfsobjecten.csv', 'TRUE')) AS f, TEXTTABLE(TO_CHARS(f.result,'UTF-8') COLUMNS woonplaats string, wijk string, buurt string, aantal_verblijfsobjecten string, gem_aantal_personen string, gem_00_tm_12_jr string, gem_13_tm_17_jr string, gem_18_tm_23_jr string, gem_24_tm_40_jr string, gem_41_tm_65_jr string, gem_66_tm_80_jr string, &quot;gem_80+_jr&quot; string  DELIMITER ';' HEADER) AS A"/>
+        <aliases xmi:uuid="mmuuid:9323afdb-b7a5-4310-964d-d4c55ad8814a" alias="invokeHttp">
+          <aliasedObject href="../01_DataSources/ZAANSTAD_DS.xmi#mmuuid/aad45c8e-19df-4caf-a33d-7a045e5c1666"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:748b8dd0-cba5-4f42-8219-d516d07cdc53" outputs="mmuuid/6bbccdd2-359f-4d81-ae32-ec5c537522d7"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5395aaf9-48f1-44c4-a20f-dbd4f467a1ed" outputs="mmuuid/6f0b718d-4d84-4628-9a9e-a8f5e9f852e5"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:cf7a2c5e-a606-4ace-b392-76d98c9fbf6a" outputs="mmuuid/49cd7ee0-cb17-49ab-b3e1-e5889a9b2dc9"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6dc26974-1731-47cc-a8af-c70b03a2af3a" outputs="mmuuid/f9df987b-2829-4726-8c65-997401788713"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:4c74a76d-22f0-4e61-b740-54bb1a6651dc" outputs="mmuuid/52800370-03f2-4696-90cb-93160a26472c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:46b70115-8f61-4872-b5e9-a5e512914633" outputs="mmuuid/ea09e709-346c-4eee-85d1-f2bad2fba51c"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:666c8b82-fc5d-4d05-bc2e-5ce78188fa3a" outputs="mmuuid/8ebb11a9-3199-4bdf-937c-95e36eeef27a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:44e6b068-0e9a-430e-92c1-7261db8df499" outputs="mmuuid/5ae7351f-e382-4f15-988a-e65c7d6d059d"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:668b2af3-5bfd-4094-94b2-432a0fcab2d3" outputs="mmuuid/fc439bda-8f3a-4f03-a33f-6a19b79cccb1"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9794dd88-dc56-46c6-831c-534897c543c1" outputs="mmuuid/309ed874-fc8e-4e87-8e3e-d560f419fc33"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:d630a1b3-6380-41be-a75f-31503da74afd" outputs="mmuuid/60407357-60cf-4fe8-9309-95338e090090"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f26b97a4-2e92-4699-9834-497efee6132e" outputs="mmuuid/6cdf25ed-d622-4dce-8bc4-80636fca48c4"/>
+      <inputs href="../01_DataSources/ZAANSTAD_DS.xmi#mmuuid/aad45c8e-19df-4caf-a33d-7a045e5c1666"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:38853834-4cf3-4224-afc4-158d9d802c39" name="POP_ADDR" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:6bbccdd2-359f-4d81-ae32-ec5c537522d7" name="woonplaats" nameInSource="woonplaats" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6f0b718d-4d84-4628-9a9e-a8f5e9f852e5" name="wijk" nameInSource="wijk" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:49cd7ee0-cb17-49ab-b3e1-e5889a9b2dc9" name="buurt" nameInSource="buurt" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:f9df987b-2829-4726-8c65-997401788713" name="aantal_verblijfsobjecten" nameInSource="aantal_verblijfsobjecten" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:52800370-03f2-4696-90cb-93160a26472c" name="gem_aantal_personen" nameInSource="gem_aantal_personen" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:ea09e709-346c-4eee-85d1-f2bad2fba51c" name="gem_00_tm_12_jr" nameInSource="gem_00_tm_12_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:8ebb11a9-3199-4bdf-937c-95e36eeef27a" name="gem_13_tm_17_jr" nameInSource="gem_13_tm_17_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:5ae7351f-e382-4f15-988a-e65c7d6d059d" name="gem_18_tm_23_jr" nameInSource="gem_18_tm_23_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:fc439bda-8f3a-4f03-a33f-6a19b79cccb1" name="gem_24_tm_40_jr" nameInSource="gem_24_tm_40_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:309ed874-fc8e-4e87-8e3e-d560f419fc33" name="gem_41_tm_65_jr" nameInSource="gem_41_tm_65_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:60407357-60cf-4fe8-9309-95338e090090" name="gem_66_tm_80_jr" nameInSource="gem_66_tm_80_jr" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6cdf25ed-d622-4dce-8bc4-80636fca48c4" name="gem_80+_jr" nameInSource="&quot;gem_80+_jr&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+</xmi:XMI>

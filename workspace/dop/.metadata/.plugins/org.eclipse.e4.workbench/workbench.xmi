@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Z_R-wc3pEeeeGcyayMRJvg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_Z_R-ws3pEeeeGcyayMRJvg" bindingContexts="_Z_R-xM3pEeeeGcyayMRJvg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;DOP.vdb&quot; tooltip=&quot;DOP/VDB/DOP.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/DOP.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;rrr.vdb&quot; tooltip=&quot;DOP/VDB/rrr.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/rrr.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST.xmi&quot; tooltip=&quot;DOP/03_Views/HORST.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/HORST.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST_VBL.xmi&quot; tooltip=&quot;DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/HORST_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/HORST_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;SEC.vdb&quot; tooltip=&quot;DOP/VDB/SEC.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/SEC.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;KING.xmi&quot; tooltip=&quot;DOP/03_Views/KING.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/KING.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;STAGING.xmi&quot; tooltip=&quot;DOP/03_Views/STAGING.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/STAGING.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;TOT2017Q1_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/TOT2017Q1_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/TOT2017Q1_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;TOT2017Q1.xmi&quot; tooltip=&quot;DOP/03_Views/TOT2017Q1.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/TOT2017Q1.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;OpenDataCB_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/OpenDataCB_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/OpenDataCB_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;TOT2017Q1_REMOTE_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/TOT2017Q1_REMOTE_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/TOT2017Q1_REMOTE_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;SEC.vdb&quot; tooltip=&quot;DOP/VDB/SEC.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/SEC.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;HORST.vdb&quot; tooltip=&quot;DOP/VDB/HORST.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/HORST.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;ZAANSTAD.xmi&quot; tooltip=&quot;DOP/03_Views/ZAANSTAD.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/ZAANSTAD.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;ZAANSTAD.vdb&quot; tooltip=&quot;DOP/VDB/ZAANSTAD.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/ZAANSTAD.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;ZAANSTAD_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/ZAANSTAD_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/ZAANSTAD_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;STAGING.xmi&quot; tooltip=&quot;DOP/03_Views/STAGING.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/STAGING.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;DOP.vdb&quot; tooltip=&quot;DOP/VDB/DOP.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/DOP.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;zzz.vdb&quot; tooltip=&quot;DOP/VDB/zzz.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/zzz.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST.xmi&quot; tooltip=&quot;DOP/03_Views/HORST.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/HORST.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;TTT.xmi&quot; tooltip=&quot;DOP/03_Views/TTT.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/TTT.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST_VBL.xmi&quot; tooltip=&quot;DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;HORST_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/HORST_DS.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/01_DataSources/HORST_DS.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;vdbEditor&quot; name=&quot;rrr.vdb&quot; tooltip=&quot;DOP/VDB/rrr.vdb&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/VDB/rrr.vdb&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;modelEditor&quot; name=&quot;KING.xmi&quot; tooltip=&quot;DOP/03_Views/KING.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/DOP/03_Views/KING.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_Z_R-ws3pEeeeGcyayMRJvg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_aOm0M83pEeeeGcyayMRJvg" label="%trimmedwindow.label.eclipseSDK" x="3372" y="195" width="1772" height="1038">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Z_R-ws3pEeeeGcyayMRJvg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_aOm0M83pEeeeGcyayMRJvg" label="%trimmedwindow.label.eclipseSDK" x="2670" y="230" width="1772" height="1038">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -11,7 +11,6 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1511178805297"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_aOm0M83pEeeeGcyayMRJvg" selectedElement="_aOm0NM3pEeeeGcyayMRJvg" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_aOm0NM3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_DJb1KM35EeeEc-yp45Sekw">
         <children xsi:type="advanced:Perspective" xmi:id="_aZjgA83pEeeeGcyayMRJvg" elementId="org.jboss.tools.common.ui.JBossPerspective" selectedElement="_aZjgBM3pEeeeGcyayMRJvg" label="JBoss" iconURI="platform:/plugin/org.jboss.tools.common.ui/$nl$/icons/jboss16.png">
@@ -175,7 +174,7 @@
                   <children xsi:type="advanced:Placeholder" xmi:id="_DJb1Os35EeeEc-yp45Sekw" elementId="org.teiid.designer.advisor.ui.views.guides.TeiidGuidesViewID" ref="_DJb1J835EeeEc-yp45Sekw"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_DJb1O835EeeEc-yp45Sekw" elementId="org.teiid.designer.ui.outputFolder" containerData="2658" selectedElement="_pLp48M4CEeeEc-yp45Sekw">
+              <children xsi:type="basic:PartStack" xmi:id="_DJb1O835EeeEc-yp45Sekw" elementId="org.teiid.designer.ui.outputFolder" containerData="2658" selectedElement="_DJb1P835EeeEc-yp45Sekw">
                 <tags>General</tags>
                 <tags>Debug</tags>
                 <tags>active</tags>
@@ -216,9 +215,81 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_aZZu8M3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.editorss" selectedElement="_aZZu8c3pEeeeGcyayMRJvg">
-      <children xsi:type="basic:PartStack" xmi:id="_aZZu8c3pEeeeGcyayMRJvg" elementId="org.eclipse.e4.primaryDataStack">
+      <children xsi:type="basic:PartStack" xmi:id="_aZZu8c3pEeeeGcyayMRJvg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_s1uwwNaDEeeVI5k-6YEhdA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <children xsi:type="basic:Part" xmi:id="_6MxxwNaAEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HORST_DS.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;HORST_DS.xmi&quot; partName=&quot;HORST_DS.xmi&quot; title=&quot;HORST_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/HORST_DS.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/01_DataSources/HORST_DS.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_DeKdkNaBEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HORST_VBL.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;HORST_VBL.xmi&quot; partName=&quot;HORST_VBL.xmi&quot; title=&quot;HORST_VBL.xmi&quot; tooltip=&quot;DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/02_VirtualBaseLayers/HORST_VBL.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_eG4BkNaBEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TTT.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;TTT.xmi&quot; partName=&quot;TTT.xmi&quot; title=&quot;TTT.xmi&quot; tooltip=&quot;DOP/03_Views/TTT.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/03_Views/TTT.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_kcmNgNaBEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HORST.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;HORST.xmi&quot; partName=&quot;HORST.xmi&quot; title=&quot;HORST.xmi&quot; tooltip=&quot;DOP/03_Views/HORST.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/03_Views/HORST.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_5-6fcNaBEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="zzz.vdb" iconURI="platform:/plugin/org.teiid.designer.vdb.ui/icons/full/obj16/VDB.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;vdbEditor&quot; name=&quot;zzz.vdb&quot; partName=&quot;zzz.vdb&quot; title=&quot;zzz.vdb&quot; tooltip=&quot;DOP/VDB/zzz.vdb&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/VDB/zzz.vdb&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>vdbEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_IDsBwNaCEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DOP.vdb" iconURI="platform:/plugin/org.teiid.designer.vdb.ui/icons/full/obj16/VDB.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;vdbEditor&quot; name=&quot;DOP.vdb&quot; partName=&quot;DOP.vdb&quot; title=&quot;DOP.vdb&quot; tooltip=&quot;DOP/VDB/DOP.vdb&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/VDB/DOP.vdb&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>vdbEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_J6FtQNaDEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="STAGING.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;STAGING.xmi&quot; partName=&quot;STAGING.xmi&quot; title=&quot;STAGING.xmi&quot; tooltip=&quot;DOP/03_Views/STAGING.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/03_Views/STAGING.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_s1uwwNaDEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SEC.vdb" iconURI="platform:/plugin/org.teiid.designer.vdb.ui/icons/full/obj16/VDB.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;vdbEditor&quot; name=&quot;SEC.vdb&quot; partName=&quot;SEC.vdb&quot; title=&quot;SEC.vdb&quot; tooltip=&quot;DOP/VDB/SEC.vdb&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/VDB/SEC.vdb&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>vdbEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_TuqB0NaHEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ZAANSTAD_DS.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;ZAANSTAD_DS.xmi&quot; partName=&quot;ZAANSTAD_DS.xmi&quot; title=&quot;ZAANSTAD_DS.xmi&quot; tooltip=&quot;DOP/01_DataSources/ZAANSTAD_DS.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/01_DataSources/ZAANSTAD_DS.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_T4PboNaHEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ZAANSTAD.xmi" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/obj16/GeneralModel.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;modelEditor&quot; name=&quot;ZAANSTAD.xmi&quot; partName=&quot;ZAANSTAD.xmi&quot; title=&quot;ZAANSTAD.xmi&quot; tooltip=&quot;DOP/03_Views/ZAANSTAD.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/03_Views/ZAANSTAD.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>modelEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_iXTQwNaIEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ZAANSTAD.vdb" iconURI="platform:/plugin/org.teiid.designer.vdb.ui/icons/full/obj16/VDB.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;vdbEditor&quot; name=&quot;ZAANSTAD.vdb&quot; partName=&quot;ZAANSTAD.vdb&quot; title=&quot;ZAANSTAD.vdb&quot; tooltip=&quot;DOP/VDB/ZAANSTAD.vdb&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/VDB/ZAANSTAD.vdb&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>vdbEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_8cwxMNadEeeVI5k-6YEhdA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HORST.vdb" iconURI="platform:/plugin/org.teiid.designer.vdb.ui/icons/full/obj16/VDB.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;vdbEditor&quot; name=&quot;HORST.vdb&quot; partName=&quot;HORST.vdb&quot; title=&quot;HORST.vdb&quot; tooltip=&quot;DOP/VDB/HORST.vdb&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DOP/VDB/HORST.vdb&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>vdbEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_aZjf8M3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.gif" tooltip="" closeable="true">
@@ -266,7 +337,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_aZjf9s3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (1 item)&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;120&quot; org.eclipse.ui.ide.markerType=&quot;120&quot; org.eclipse.ui.ide.pathField=&quot;160&quot; org.eclipse.ui.ide.resourceField=&quot;120&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;1108&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;120&quot; org.eclipse.ui.ide.markerType=&quot;120&quot; org.eclipse.ui.ide.pathField=&quot;160&quot; org.eclipse.ui.ide.resourceField=&quot;120&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;1108&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_ajh7UM3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.views.ProblemView">
@@ -281,11 +352,13 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Server</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_bJPQcM3pEeeeGcyayMRJvg" elementId="org.eclipse.wst.server.ui.ServersView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_bJPQcc3pEeeeGcyayMRJvg" elementId="org.eclipse.wst.server.ui.ServersView" visible="false"/>
+      <toolbar xmi:id="_bJPQcc3pEeeeGcyayMRJvg" elementId="org.eclipse.wst.server.ui.ServersView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_aZjf-M3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
@@ -311,13 +384,11 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_pLzp8M4CEeeEc-yp45Sekw" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_pLzp8c4CEeeEc-yp45Sekw" elementId="org.eclipse.ui.console.ConsoleView"/>
+      <toolbar xmi:id="_pLzp8c4CEeeEc-yp45Sekw" elementId="org.eclipse.ui.console.ConsoleView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_aZjf-83pEeeeGcyayMRJvg" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.BookmarksView"/>
@@ -388,7 +459,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_DJb1IM35EeeEc-yp45Sekw" elementId="explorer.view" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Model Explorer" iconURI="platform:/plugin/org.teiid.designer.ui/icons/full/cview16/projects.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.teiid.designer.ui.explorer.ModelExplorerResourceNavigator"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.teiid.designer.ui"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;.project&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;XMLExtensionsProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;BuiltInMedsProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;/DOP&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/01_DataSources&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/02_VirtualBaseLayers&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views/HORST.xmi&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/VDB&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view LINK_NAVIGATOR_TO_EDITOR=&quot;0&quot; sorter=&quot;1&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;*.class&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;filter element=&quot;.project&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;XMLExtensionsProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;filter element=&quot;BuiltInMedsProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;/DOP&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/01_DataSources&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/02_VirtualBaseLayers&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views/HORST.xmi&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views/TTT.xmi&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/03_Views/ZAANSTAD.xmi&quot;/>&#xD;&#xA;&lt;element path=&quot;/DOP/VDB&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;selection>&#xD;&#xA;&lt;element path=&quot;/DOP/01_DataSources/GEMMA_DS.xmi&quot;/>&#xD;&#xA;&lt;/selection>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Teiid Designer</tags>
       <menus xmi:id="_DJ4hEM35EeeEc-yp45Sekw" elementId="explorer.view">
@@ -482,7 +553,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aUCt0s3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_p-bOp9QhEeeeLI_8isJKzw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Z_k9qM3pEeeeGcyayMRJvg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_eOCWUNZ9EeeVI5k-6YEhdA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_Z_k9qM3pEeeeGcyayMRJvg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aUCt083pEeeeGcyayMRJvg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -518,7 +589,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aUCt183pEeeeGcyayMRJvg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_p-bOsdQhEeeeLI_8isJKzw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_Z_k9SM3pEeeeGcyayMRJvg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_eODkcdZ9EeeVI5k-6YEhdA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_Z_k9SM3pEeeeGcyayMRJvg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aUCt2M3pEeeeGcyayMRJvg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3587,7 +3658,7 @@
   <addons xmi:id="_Z_R-083pEeeeGcyayMRJvg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_Z_R-1M3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_Z_R-1c3pEeeeGcyayMRJvg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_pD11sdQhEeeeLI_8isJKzw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_Z_bvwM3pEeeeGcyayMRJvg" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_Z_bvwc3pEeeeGcyayMRJvg" elementId="org.jboss.ide.eclipse.as.wtp.ui.commands.modules" name="Modules" description="Commands related to modules"/>

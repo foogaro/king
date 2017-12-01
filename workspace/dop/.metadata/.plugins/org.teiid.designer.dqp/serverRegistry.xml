@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server default="true" host="localhost" parentServerId="Red Hat JBoss EAP 6.1+1511189477141" version="8.12.5">
-    <admin password="VE9LIyMhdkVIc25aS2poWlh1VFJ3Y3hUamY5ZHhkRGFWcEZqakNKcUs4cWY2LXdOTlhCY3JTTWJzNHp6b2RXMzJERmJITnJiLXZqZVQ3Z0ZZNUtmNzNSZFhyVFE=" port="9999" secure="false" user="admin"/>
-    <jdbc jdbcpassword="VE9LIyMhNkxiUmljQWxnS2pTclRBNVlUR0ZsMmNPeTZFdjlDQkRobVdmdHpLVVNZTlFBOHRVM0NXb2trWlJMeEVrQXJINGp2UXdTRkN4cHFvcVd5Z3dBTERSS1E=" jdbcport="31000" jdbcsecure="false" jdbcuser="teiidUser"/>
-  </server>
-  <server host="localhost" parentServerId="JDV-6.3" version="8.12.5">
+  <server default="true" host="localhost" parentServerId="JDV-6.3" version="8.12.5">
     <admin password="VE9LIyMhdkVIc25aS2poWlh1VFJ3Y3hUamY5ZHhkRGFWcEZqakNKcUs4cWY2LXdOTlhCY3JTTWJzNHp6b2RXMzJERmJITnJiLXZqZVQ3Z0ZZNUtmNzNSZFhyVFE=" port="9999" secure="false" user="admin"/>
     <jdbc jdbcport="31000" jdbcsecure="false" jdbcuser=""/>
   </server>
