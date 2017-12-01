@@ -60,16 +60,18 @@ For more information about the command line tools, check the CLI Reference and B
 
 
 STEP 2
-./oc.exe env dc/dv-king-app CUSTOM_INSTALL_DIRECTORIES=extensions
-./oc.exe env dc/dv-king-app VDB_DIRS=vdbs
 ./oc.exe env dc/dv-king-app CONFIGURATION_NAME=dv-king-app-config
 ./oc.exe env dc/dv-king-app SERVICE_ACCOUNT_NAME=dv-king-app-service-account
-./oc.exe env bc/dv-king-app ENV_FILES=extensions/datasources.env,extensions/resourceadapters.env,extensions/drivers.env
+./oc.exe env bc/dv-king-app CONFIGURATION_NAME=dv-king-app-config
+./oc.exe env bc/dv-king-app SERVICE_ACCOUNT_NAME=dv-king-app-service-account
+./oc.exe env bc/dv-king-app CUSTOM_INSTALL_DIRECTORIES=extensions
+./oc.exe env bc/dv-king-app VDB_DIRS=vdbs
+./oc.exe env bc/dv-king-app ENV_FILES=/etc/datavirt-environment/datasources.env,/etc/datavirt-environment/resourceadapters.env,/etc/datavirt-environment/drivers.env
 ./oc.exe create serviceaccount dv-king-app-service-account
 ./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:dv-king-app-service-account -n king-poc
-./oc.exe secret new dv-king-app-secret keystore.jks jgroups.jceks
-./oc.exe secrets new dv-king-app-config extensions/datasources.env extensions/resourceadapters.env extensions/drivers.env
-./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config
+./oc.exe secrets new dv-king-app-secret keystore.jks jgroups.jceks -n king-poc
+./oc.exe secrets new dv-king-app-config extensions/datasources.env extensions/resourceadapters.env extensions/drivers.env -n king-poc
+./oc.exe secrets link dv-king-app-service-account dv-king-app-secret dv-king-app-config -n king-poc
 
 ./oc.exe delete secrets dv-king-app-secret
 ./oc.exe delete secrets dv-king-app-config
@@ -105,3 +107,21 @@ git filter-branch --index-filter 'git rm --cached --ignore-unmatch oc.exe' <sha1
 
 
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch ocp/oc.exe'
+
+
+
+
+datavirt-app-secret
+datavirt-app-config
+datavirt-service-account
+
+./oc.exe create serviceaccount datavirt-service-account
+./oc.exe policy add-role-to-user view system:serviceaccount:king-poc:datavirt-service-account -n king-poc
+./oc.exe secrets new datavirt-app-secret keystore.jks jgroups.jceks -n king-poc
+./oc.exe secrets new datavirt-app-config extensions/datasources.env extensions/resourceadapters.env extensions/drivers.env -n king-poc
+./oc.exe secrets link datavirt-service-account datavirt-app-secret datavirt-app-config -n king-poc
+
+./oc.exe delete secrets datavirt-app-secret
+./oc.exe delete secrets datavirt-app-config
+./oc.exe delete serviceaccount datavirt-service-account
+
